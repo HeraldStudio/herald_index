@@ -1,0 +1,396 @@
+/****@group color***********
+  #ccc  grey
+  #643  blond
+  #666  light grey
+
+*******End of color************/
+
+/**@group test style****/
+
+
+/**End of test style****/
+/**@group general style****/
+
+body{
+  font: 14px "Microsoft YaHei",Helvetica,Arial,sans-serif;
+  line-height: 1.62;
+}
+
+.left-tag{
+    color: #643;
+    text-decoration: none;
+    margin: 0.6em 0;
+    display: block;
+    font-size: 1.5em;
+}
+
+.right-tag{
+    color: #643;
+    text-decoration: none;
+    margin: 0.6em 0;
+    display: block;
+    font-size: 1.5em;
+}
+
+.section-title{
+  font-weight: bold;
+  font-size: 2em;
+  font-family: "Microsoft YaHei";
+  letter-spacing: 0.4em;
+
+}
+
+h4{
+   font-family: "Microsoft YaHei";
+}
+
+a:link{
+  text-decoration: none;
+}
+
+/**End of general style****/
+/***@group nav******/
+
+nav {
+  font-size: 1.3em;
+}
+
+nav .navbar-brand{
+  font-size: 1.4em;
+  text-shadow: 0.1em 0.1em 0.2em #ccc;
+}
+
+
+/***end of nav******/
+/***@group wrapper*****/
+#wrapper{
+ 
+}
+
+
+/**End of wrapper****/
+/****@group information*****/
+#information .container{
+  padding: 2em 0;
+}
+
+#information h4{
+  color: orange;
+}
+
+
+#informationTitle{
+  border-bottom: solid 1px orange;
+  margin-bottom: 2em;
+}
+
+#informationMain{
+}
+
+#informationMain h5{
+  font-family: "Microsoft YaHei";
+  color: #ff8883;
+  font-size: 1.5em;
+  margin-bottom: 0.7em;
+  padding-left: .5em;
+  border-left: solid 3px orange;
+}
+
+#informationMain h5 small{
+  margin-left: 1em;
+  color: #bfbfbf;
+}
+
+#informationMain .news{
+  margin-bottom: 2em;
+}
+
+#informationMain .news li a{
+  line-height: 1.8em;
+  font-size: 1.1em;
+  color: black;
+}
+
+#informationMain .news li a:hover{
+  color: orange;
+  text-align: none;
+}
+
+#informationMain .recommand>div{
+  margin-bottom: 1.5em;
+}
+
+#informationMain .recommand a{
+  padding-left: 0;
+  padding-right: 0;
+  color: black;
+}
+#informationMain .recommand a:hover{
+  color: orange;
+  text-align: none;
+}
+#informationRight h5{
+  font-family: "Microsoft YaHei";
+    font-size: 1.3em;
+  margin-bottom: 1em;
+  background-color: #ffffc1;
+  line-height: 2em;
+
+}
+
+#informationRight .webnavigation{
+  margin-bottom: 2em;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#informationRight .webnavigation span{
+  margin-right: 0.5em;
+}
+
+
+#informationRight .webnavigation a{
+  color: black;
+}
+
+
+#informationRight .webnavigation a:hover{
+  color: orange;
+  text-align: none;
+}
+
+#informationRight .mobile img{
+  margin-bottom: 1em;
+}
+/****End information*****/
+/***@group activity**********************/
+#activity{
+
+  background-color: #f7f7f7;
+}
+
+#activity .container{
+    padding: 2em 0 3em 0;
+}
+
+#activity h4{
+  color: green;
+
+}
+
+#activityTitle{
+  border-bottom: solid 1px green;
+  margin-bottom: 1.5em;
+}
+
+#activityTitle div{
+  position: relative;
+  top: 1.5em;
+}
+
+#activityTitle li a{
+  color: green;
+}
+
+#activityMain h5{
+  font-family: "Microsoft YaHei";
+  color: green;
+  font-size: 1.5em;
+  margin-bottom: 0.7em;
+  padding-left: .5em;
+  border-left: solid 3px green;
+}
+
+#activityMain h5 small{
+  margin-left: 1em;
+  color: #bfbfbf;
+}
+
+#activityMain .album img{
+  margin-right:1em; 
+}
+
+#activityMain .pull-right{
+  margin-top: 0.5em;
+}
+
+#activityMain .pull-right a{
+  color: green;
+}
+
+#activityMain .item{
+  margin-top: 1em;
+}
+
+#activityMain .item a{
+  color: #643;
+}
+
+#activityRight .item{
+  margin-bottom:0.5em; 
+  border-bottom: solid 1px #ccc;
+  padding-bottom: 0.5em;
+}
+
+
+#activityRight .item>div div{
+  color: #666; 
+}
+
+#activityRight .item div a{
+  color: #643;
+  font-size: 1.1em;
+  
+}
+
+#activityRight h5{
+    font-family: "Microsoft YaHei";
+    font-size: 1.3em;
+  margin-bottom: 1em;
+  background-color: #dbf4e1;
+  line-height: 2em;
+}
+
+#activityRight .pull-right a{
+  color: green;
+}
+/***End of activity**********************/
+/*****@group wiki*************/
+#wiki .container{
+  padding:2em 0 3em 0;
+}
+
+#wiki a:hover{
+  color: #00a8f3;
+  text-align: none;
+}
+
+#wikiTitle{
+
+  border-bottom: solid 1px #00a8f3;
+  margin-bottom: 2em;
+
+}
+
+#wikiTitle .section-title{
+  color: #00a8f3;
+}
+
+#wikiTitle div{
+  position: relative;
+  top: 1.7em;
+}
+
+#wikiMain a{
+  color: black;
+}
+
+#wikiMain h5{
+  margin-bottom: 1em;
+}
+
+#wikiMain div:first-child h5{
+ margin-bottom: 0.3em;
+}
+
+
+#wikiMain h5 b{
+  color: #757575;
+  font-size: 1.2em;
+  text-align: center;
+  font-family: "Microsoft YaHei";
+}
+
+#wikiMain p{
+    text-indent: 2em;
+
+}
+
+#wikiMain p a{
+  color: #757575;
+}
+
+#wikiMain div:first-child{
+  /*border: solid 1px #d8d8d8;*/
+  /*padding-top: 1em;*/
+  margin-bottom: 0.5em;
+}
+
+#wikiMain .news h5{
+  color: #00a8f3;
+  border-left: solid 3px #00a8f3;
+  padding-left: 1em;
+}
+
+#wikiMain .news div a{
+  line-height: 2em;
+  font-size: 1.1em;
+}
+
+#wikiMain .carousel-content{
+
+}
+
+#wikiRight h5{
+  font-family: "Microsoft YaHei";
+  font-size: 1.3em;
+  margin-bottom: 1.4em;
+  background-color: #dbf4e1;
+  line-height: 2em;
+}
+
+#wikiRight span{
+  display: inline-block;
+  margin-right: 0.5em;
+  margin-bottom: 1em;
+  line-height: 1.5em;
+}
+
+#wikiRight span a{
+  color: white;
+}
+/***End of wiki***************/
+/****@group job
+#job{
+    background-color: #f7f7f7;
+    padding: 3em 0;
+}
+
+#job h4{
+  color: purple;
+}
+
+#jobTitle{
+  border-bottom: solid 1px purple;
+  margin-bottom: 3em;
+}
+}
+
+#jobMain ul{
+  list-style: none;
+}
+
+/****End job**********/
+/***@group market**********************/
+#secondhand{
+     padding: 3em 0;
+}
+
+#secondhand h4{
+  color: orange;
+}
+
+#secondhandTitle{
+  border-bottom: solid 1px orange;
+  margin-bottom: 3em;
+
+}
+
+#secondhandMain img{
+  max-width: 135px;
+}
+
+#secondhandMain>div{
+  margin-bottom: 1em;
+}
+

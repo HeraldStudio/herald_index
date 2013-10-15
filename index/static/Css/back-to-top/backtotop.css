@@ -1,0 +1,181 @@
+.text-center{
+	text-align:center;
+}
+#back-to-top{
+	position:fixed;
+	bottom:242px;
+	right:7px;
+	height:32px;
+	margin:0;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+#back-to-top a{
+	text-align:center;
+	text-decoration:none;
+	color:#d1d1d1;
+	display:block;
+	/*使用CSS3中的transition属性给跳转链接中的文字添加渐变效果*/
+	-moz-transition:color 1s; 
+	-webkit-transition:color 1s;
+	-o-transition:color 1s;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+#back-to-top a:hover{
+	color:#979797;
+}
+#back-to-top a span{
+	background:#d1d1d1;
+	display:block;
+	height:32px;
+	width:32px;
+	background:#d1d1d1 url(../../Images/top.png) no-repeat center center;
+	-moz-transition:background 1s;
+	-webkit-transition:background 1s;
+	-o-transition:background 1s;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+#back-to-top a:hover span{
+	background:#979797 url(../../Images/top.png) no-repeat center center;
+}
+
+#fixdiv{
+		position:fixed;
+		right:-136px;
+		bottom:30px;
+		width:175px;
+		height:207px;
+		z-index:100000;
+}
+#gototop{
+	width:32px;
+	height:32px;
+	z-index=100000;
+	background-image:url(../../Images/top.png);
+	cursor:pointer;
+	position:fixed;
+	right:7px;
+	bottom:242px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+#MsgGoUp{
+	height:26px;
+	width:134px;
+	position:fixed;
+	bottom:242px;
+	right:35px;
+	background-color:#D3D3D3;
+	  -webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+			border-radius: 4px;
+	padding-top:6px;
+	display:none;
+}
+#fix2{
+}
+#fix2pic{
+	width:32px;
+	height:32px;
+	background-image:url(../../Images/top.png);
+	cursor:pointer;
+	position:relative;
+	left:0px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+#menu2{
+	position:relative;
+	left:13px;
+
+	display:none;
+}
+#Msg2{
+	height:26px;
+	width:125px;
+	position:fixed;
+	bottom:205px;
+	right:44px;
+	background-color:#D3D3D3;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	padding-top:6px;
+	display:none;
+}
+#fix3{
+	position:relative;
+	top:5px;
+}
+#fix3pic{
+	width:32px;
+	height:32px;
+	background-image:url(../../Images/top.png);
+	cursor:pointer;
+	position:relative;
+	left:0px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+#menu3{
+	position:relative;
+	left:13px;
+	display:none;
+}
+#Msg3{
+	height:26px;
+	width:125px;
+	position:absolute;
+	top:0px;
+	right:37px;
+	background-color:#D3D3D3;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	padding-top:6px;
+	display:none;
+}
+#fix4{
+	position:relative;
+	top:10px;
+}
+#fix4pic{
+	width:32px;
+	height:32px;
+	background-image:url(../../Images/top.png);
+	cursor:pointer;
+	position:relative;
+	left:0px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+#menu4{
+	position:relative;
+	left:13px;
+	display:none;
+}
+#Msg4{
+	height:26px;
+	width:125px;
+	position:absolute;
+	top:0px;
+	right:37px;
+	background-color:#D3D3D3;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	padding-top:6px;
+	display:none;
+}
+.myboder{
+	z-index:10000;
+}
