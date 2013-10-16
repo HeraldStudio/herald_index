@@ -20,7 +20,23 @@ DATABASES = {
         'PASSWORD': '19901231',
         'HOST': '127.0.0.1',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '3306',                      # Set to empty string for default.
-    }
+    },
+    'leaguedb' : {
+        'ENGINE' : 'django.db.backends.mysql',
+        'NAME' : 'mydb2',
+        'USER' : 'root',
+        'PASSWORD' : '19901231',
+        'HOST' : '127.0.0.1',
+        'PORT' : '3306'
+    },
+    'wikidb' : {
+        'ENGINE' : 'django.db.backends.mysql',
+        'NAME' : 'mydb3',
+        'USER' : 'root',
+        'PASSWORD' : '19901231',
+        'HOST' : '127.0.0.1',
+        'PORT' : '3306'
+    },
 }
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
@@ -31,11 +47,11 @@ ALLOWED_HOSTS = []
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # In a Windows environment this must be set to your system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'Etc/GMT-8'  #'America/Chicago'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-cn' #'en-us'
 
 SITE_ID = 1
 
