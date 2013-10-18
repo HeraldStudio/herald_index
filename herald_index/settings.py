@@ -157,6 +157,11 @@ SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
+    'formatters':{
+        'standard': {
+            'format': '%(asctime)s [%(threadName)s:%(thread)d] [%(name)s:%(lineno)d] [%(levelname)s]- %(message)s'
+        },
+    },
     'filters': {
         'require_debug_false': {
             '()': 'django.utils.log.RequireDebugFalse'
@@ -167,7 +172,12 @@ LOGGING = {
             'level': 'ERROR',
             'filters': ['require_debug_false'],
             'class': 'django.utils.log.AdminEmailHandler'
-        }
+        },
+        'console':{
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'standard'
+        },
     },
     'loggers': {
         'django.request': {
@@ -175,5 +185,10 @@ LOGGING = {
             'level': 'ERROR',
             'propagate': True,
         },
+        'index':{
+            'handlers':['console',],
+            'level':"DEBUG",
+            'propagate':True
+        }
     }
 }

@@ -1,4 +1,3 @@
-# Create your views here.
 
 # -*- encoding: utf-8 -*-
 
@@ -13,6 +12,8 @@ from herald_index import settings
 WIKI_TIP_HALF_URL = ""
 WIKI_QUES_HALF_URL = "http://herald.seu.edu.cn/xyzn/faq/question/"
 WIKI_REC_HALF_URL = "http://baike.baidu.com/view/7161744.htm"
+
+LEAGUE_DETAIL_HALF_URL = ""
 
 def get_hot_dic():
     #####  hot module
@@ -37,6 +38,9 @@ def get_wiki_dic():
     hot_ques = models.Wiki_question.objects.get_hot_questions(5)
     hot_tips = models.Entry.objects.get_hot_entry(50)
     rec_entry = models.Recommend_entry.objects.get_new_rec_entry(1)
+    import logging
+    logger = logging.getLogger("index")
+    logger.info("得到推荐词条共：" + str(len(rec_entry)))
     dic = {
         "wiki_ques_half_url":WIKI_QUES_HALF_URL,
         "wiki_tip_half_url":WIKI_TIP_HALF_URL,
@@ -44,14 +48,30 @@ def get_wiki_dic():
         "new_ques":new_ques,
         "hot_ques":hot_ques,
         "hot_tips":hot_tips,
-        "rec_entry":rec_entry
+        "rec_entry":rec_entry[0]
     }
     return dic
+
+def get_league_dic():
+    new_acti = models.Activity.objects.get_latest_activity(8)
+    hot_acti = models.Activity.objects.get_hot_activity(6)
+    album = models.Album.objects.get_latest_album(3)
+
+    dic = {
+        "hot_acti":hot_acti,
+        "new_acti":new_acti,
+        "album":album,
+        "acti_detail_half_url":LEAGUE_DETAIL_HALF_URL
+    }
+
+    return dic
+
 
 def index(request):
     dics = {}
     dics.update(get_hot_dic())
     dics.update(get_wiki_dic())
+    dics.update(get_league_dic())
 
     return render_to_response("Herald Index.html", dics, RequestContext(request))
 

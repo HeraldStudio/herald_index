@@ -17,129 +17,38 @@
         <div class="clearfix"></div>
       </div>
       <div id="activityMain" class="col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-lg-7 col-md-7  col-sm-7 ">
-        <div class="item col-lg-3 col-md-3  col-sm-3">
-          <a href=""><img src="./Images/2'.png" alt="" class="img-responsive"></a>
-          <div class="">
-            <a href="">东南大学管弦乐队专场演出</a>
-          </div>
+          {% for acti in new_acti %}
+              <div class="item col-lg-3 col-md-3  col-sm-3">
+              <a href=""><img src="{{ acti.post_add }}" alt="" class="img-responsive"></a>
+              <div class="">
+                <a href="{{ league_detail_half_url }}{{ acti.id }}">{{ acti.name }}</a>
+              </div>
+              </div>
+          {% endfor %}
 
-        </div>
-        <div class="item col-lg-3 col-md-3  col-sm-3">
-          <a href=""><img src="./Images/2'.png" alt="" class="img-responsive"></a>
-          <div class="">
-            <a href="">东南大学管弦乐队专场演出</a>
-          </div>
-
-        </div>
-        <div class="item col-lg-3 col-md-3 col-sm-3">
-          <a href=""><img src="./Images/2'.png" alt="" class="img-responsive"></a>
-          <div class="">
-            <a href="">东南大学管弦乐队专场演出</a>
-          </div>
-
-        </div>
-        <div class="item col-lg-3 col-md-3  col-sm-3">
-          <a href=""><img src="./Images/2'.png" alt="" class="img-responsive"></a>
-          <div class="">
-            <a href="">东南大学管弦乐队专场演出</a>
-          </div>
-
-        </div>
-        <div class="item col-lg-3 col-md-3 col-sm-3 ">
-          <a href=""><img src="./Images/2'.png" alt="" class="img-responsive"></a>
-          <div class="">
-            <a href="">东南大学管弦乐队专场演出</a>
-          </div>
-        </div>
-        <div class="item col-lg-3 col-md-3 col-sm-3 ">
-          <a href=""><img src="./Images/2'.png" alt="" class="img-responsive"></a>
-          <div class="">
-            <a href="">东南大学管弦乐队专场演出</a>
-          </div>
-        </div>
-        <div class="item col-lg-3 col-md-3 col-sm-3 ">
-          <a href=""><img src="./Images/2'.png" alt="" class="img-responsive"></a>
-          <div class="">
-            <a href="">东南大学管弦乐队专场演出</a>
-          </div>
-        </div>
-        <div class="item col-lg-3 col-md-3  col-sm-3">
-          <a href=""><img src="./Images/2'.png" alt="" class="img-responsive"></a>
-          <div class="">
-            <a href="">东南大学管弦乐队专场演出</a>
-          </div>
-        </div>
         <div class="pull-right"><a href="">更多...</a></div>
         <div class="clearfix"></div>
         <h5>社团相册<small>记录社团活动的点点滴滴</small></h5>
         <div class="album">
-          <a href="" class="col-lg-4 col-md-4  col-sm-4"><img src="Images/album.png" alt=""  class="img-responsive"></a>
-          <a href="" class="col-lg-4 col-md-4 col-sm-4"><img src="Images/album.png" alt="" class="img-responsive"></a>
-          <a href="" class="col-lg-4 col-md-4 col-sm-4"><img src="Images/album.png" alt="" class="img-responsive"></a>
+            {% for pic in album %}
+                <a href="" class="col-lg-4 col-md-4  col-sm-4"><img src="{{ pic.cover_address }}" alt=""  class="img-responsive"></a>
+            {% endfor %}
         </div>
       </div>
       <div id="activityRight" class="col-lg-4 col-md-4 col-sm-4" >
         <h5>热门活动推荐</h5>
-        <div class="item">
-          <img src="./Images/3'.png" alt="" class="col-lg-3 col-md-3 col-sm-3 img-responsive">
-          <div class="col-lg-9 col-md-9 col-sm-9 ">
-            <div><a href="">东南大学管弦乐队专场演出</a></div>
-            <div><small>10月12日周六</small></div>
-            <div>九龙湖校区大活一层</div>
+          {% for acti in hot_acti %}
+              <div class="item">
+              <img src="{{ acti.post_add }}" alt="" class="col-lg-3 col-md-3 col-sm-3 img-responsive">
+              <div class="col-lg-9 col-md-9 col-sm-9 ">
+                <div><a href="">{{ acti.name }}</a></div>
+                <div><small>{{ acti.hold_time }}</small></div>
+                <div>{{ acti.place }}</div>
 
-          </div>
-           <div class="clearfix"></div>
-        </div>
-        <div class="item">
-          <img src="./Images/3'.png" alt="" class="col-lg-3 col-md-3 col-sm-3  img-responsive">
-          <div class="col-lg-9 col-md-9  col-sm-9 ">
-            <div><a href="">东南大学管弦乐队专场演出</a></div>
-            <div><small>10月12日周六</small></div>
-            <div>九龙湖校区大活一层</div>
-
-          </div>
-           <div class="clearfix"></div>
-        </div>
-        <div class="item">
-          <img src="./Images/3'.png" alt="" class="col-lg-3 col-md-3 col-sm-3 img-responsive">
-          <div class="col-lg-9 col-md-9 col-sm-9 ">
-            <div><a href="">东南大学管弦乐队专场演出</a></div>
-            <div><small>10月12日周六</small></div>
-            <div>九龙湖校区大活一层</div>
-
-          </div>
-           <div class="clearfix"></div>
-        </div>
-        <div class="item">
-          <img src="./Images/3'.png" alt="" class="col-lg-3 col-md-3 col-sm-3  img-responsive">
-          <div class="col-lg-9 col-md-9 col-sm-9 ">
-            <div><a href="">东南大学管弦乐队专场演出</a></div>
-            <div><small>10月12日周六</small></div>
-            <div>九龙湖校区大活一层</div>
-
-          </div>
-           <div class="clearfix"></div>
-        </div>
-        <div class="item">
-          <img src="./Images/3'.png" alt="" class="col-lg-3 col-md-3 col-sm-3  img-responsive">
-          <div class="col-lg-9 col-md-9 col-sm-9 ">
-            <div><a href="">东南大学管弦乐队专场演出</a></div>
-            <div><small>10月12日周六</small></div>
-            <div>九龙湖校区大活一层</div>
-
-          </div>
-           <div class="clearfix"></div>
-        </div>
-        <div class="item">
-          <img src="./Images/3'.png" alt="" class="col-lg-3 col-md-3 col-sm-3  img-responsive">
-          <div class="col-lg-9 col-md-9 col-sm-9">
-            <div><a href="">东南大学管弦乐队专场演出</a></div>
-            <div><small>10月12日周六</small></div>
-            <div>九龙湖校区大活一层</div>
-
-          </div>
-           <div class="clearfix"></div>
-        </div>
+              </div>
+               <div class="clearfix"></div>
+            </div>
+          {% endfor %}
 
         <div class="pull-right"><a href="">更多...</a></div>
       </div>

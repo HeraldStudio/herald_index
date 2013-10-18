@@ -161,8 +161,12 @@ class Wiki_question(models.Model):
         db_table = conf.VIEW_NAME_WIKI_QUESTION
 
 class Recommend_entry_Manager(models.Manager):
+
     def get_new_rec_entry(self, num):
+        import logging
+        logger = logging.getLogger("index")
         entry = self.all().order_by("-publish_date")
+        # logger.info("推荐词条共："+str(len(entry)))
         if len(entry)<num:
             return entry
         else:
@@ -215,7 +219,7 @@ class ActivityManager(models.Manager):
             return acts[0:num]
 
     def get_hot_activity(self, num):
-        acts = self.all().order_by("hits_on")
+        acts = self.all().order_by("-hits_on")
         if len(acts)<num:
             return acts
         else:
@@ -227,6 +231,8 @@ class Activity(models.Model):
     post_add = models.CharField(max_length=255)
     release_time = models.CharField()
     hits_on = models.IntegerField()
+    hold_time = models.DateTimeField()
+    place = models.CharField(max_length=50)
 
     objects = ActivityManager()
 

@@ -2,55 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index/DBRouter.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index/static/custom_js/admin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index/templates/admin_link.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index/templates/admin_news.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index/templates/admin_recommend.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index/conf.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index/templates/tab.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/herald_index.iml" afterPath="$PROJECT_DIR$/.idea/herald_index.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/static/Css/lunbo/fonts/BebasNeue-webfont.svg" afterPath="$PROJECT_DIR$/index/static/Css/lunbo/fonts/BebasNeue-webfont.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/static/Js/lunbo/DDPngMin.js" afterPath="$PROJECT_DIR$/index/static/Js/lunbo/DDPngMin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/static/Css/lunbo/fonts/Dharma Type Font License.txt" afterPath="$PROJECT_DIR$/index/static/Css/lunbo/fonts/Dharma Type Font License.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/templates/Herald Index.html" afterPath="$PROJECT_DIR$/index/templates/Herald Index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/static/Js/bootstrap/bootstrap-ie.js" afterPath="$PROJECT_DIR$/index/static/Js/bootstrap/bootstrap-ie.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/static/Css/bootstrap/bootstrap-ie6.css" afterPath="$PROJECT_DIR$/index/static/Css/bootstrap/bootstrap-ie6.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/static/Css/bootstrap/bootstrap-theme.css" afterPath="$PROJECT_DIR$/index/static/Css/bootstrap/bootstrap-theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/static/Css/bootstrap/bootstrap.css" afterPath="$PROJECT_DIR$/index/static/Css/bootstrap/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/static/Js/bootstrap/bootstrap.js" afterPath="$PROJECT_DIR$/index/static/Js/bootstrap/bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/static/Css/bootstrap/bootstrap.min.css" afterPath="$PROJECT_DIR$/index/static/Css/bootstrap/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/static/Js/bootstrap/bootstrap.min.js" afterPath="$PROJECT_DIR$/index/static/Js/bootstrap/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/static/Css/custom.css" afterPath="$PROJECT_DIR$/index/static/Css/custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/static/Css/herald_index.css" afterPath="$PROJECT_DIR$/index/static/Css/herald_index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/static/Js/herald_index.js" afterPath="$PROJECT_DIR$/index/static/Js/herald_index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/static/Css/bootstrap/ie.css" afterPath="$PROJECT_DIR$/index/static/Css/bootstrap/ie.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/templates/mod_herald_hot.html" afterPath="$PROJECT_DIR$/index/templates/mod_herald_hot.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/templates/mod_league.html" afterPath="$PROJECT_DIR$/index/templates/mod_league.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/templates/mod_wiki.html" afterPath="$PROJECT_DIR$/index/templates/mod_wiki.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/models.py" afterPath="$PROJECT_DIR$/index/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/static/Js/lunbo/modernizr.custom.28468.js" afterPath="$PROJECT_DIR$/index/static/Js/lunbo/modernizr.custom.28468.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/static/Js/respond.min.js" afterPath="$PROJECT_DIR$/index/static/Js/respond.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/static/Css/bootstrap/responsive-nav.css" afterPath="$PROJECT_DIR$/index/static/Css/bootstrap/responsive-nav.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/static/Js/bootstrap/responsive-nav.js" afterPath="$PROJECT_DIR$/index/static/Js/bootstrap/responsive-nav.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/herald_index/settings.py" afterPath="$PROJECT_DIR$/herald_index/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/static/Css/lunbo/style2.css" afterPath="$PROJECT_DIR$/index/static/Css/lunbo/style2.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/urls.py" afterPath="$PROJECT_DIR$/index/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/views.py" afterPath="$PROJECT_DIR$/index/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/templates/wrapper.html" afterPath="$PROJECT_DIR$/index/templates/wrapper.html" />
     </list>
     <ignored path="herald_index.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/urls.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1381989909434" ignored="false" />
-    <file path="/views.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382060643083" ignored="false" />
+    <file path="/views.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382067688647" ignored="false" />
     <file path="/wsgi.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1381726454878" ignored="false" />
-    <file path="/settings.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382011613434" ignored="false" />
-    <file path="/models.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382061286734" ignored="false" />
+    <file path="/settings.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382062016228" ignored="false" />
+    <file path="/models.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382065834424" ignored="false" />
     <file path="F:/Workspace/yichat/app/views.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1381890457597" ignored="false" />
     <file path="F:/Workspace/yichat/xchat/urls.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1381889066508" ignored="false" />
     <file path="F:/Workspace/yichat/xchat/settings.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1381889066508" ignored="false" />
@@ -77,6 +40,7 @@
     <file path="/config.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382013084316" ignored="false" />
     <file path="/conf.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382030454094" ignored="false" />
     <file path="/mod_wiki.html" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382060763401" ignored="false" />
+    <file path="/mod_league.html" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382067776018" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,9 +63,9 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="0" selection-start="1343" selection-end="1343" vertical-scroll-proportion="0.0">
+            <state line="70" column="13" selection-start="2227" selection-end="2227" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#54#90#0" expanded="true" />
+                <element signature="e#28#64#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -110,7 +74,16 @@
       <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="166" column="24" selection-start="4401" selection-end="4401" vertical-scroll-proportion="0.22651933">
+            <state line="221" column="37" selection-start="5892" selection-end="5892" vertical-scroll-proportion="0.57734805">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/herald_index/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="163" column="6" selection-start="5754" selection-end="5754" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -134,10 +107,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mod_wiki.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index/templates/mod_wiki.html">
+      <file leaf-file-name="mod_league.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index/templates/mod_league.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="24" selection-start="1162" selection-end="1162" vertical-scroll-proportion="-3.5">
+            <state line="21" column="52" selection-start="972" selection-end="972" vertical-scroll-proportion="6.107143">
               <folding />
             </state>
           </provider>
@@ -164,9 +137,7 @@
       <list>
         <option value="$PROJECT_DIR$/index/IndexDBRouter.py" />
         <option value="$PROJECT_DIR$/index/config.py" />
-        <option value="$PROJECT_DIR$/herald_index/settings.py" />
         <option value="$PROJECT_DIR$/index/templates/mod_herald_hot.html" />
-        <option value="$PROJECT_DIR$/index/templates/mod_league.html" />
         <option value="$PROJECT_DIR$/index/templates/footer.html" />
         <option value="$PROJECT_DIR$/index/templates/login.html" />
         <option value="$PROJECT_DIR$/index/templates/tab.html" />
@@ -174,9 +145,11 @@
         <option value="$PROJECT_DIR$/index/templates/header.html" />
         <option value="$PROJECT_DIR$/index/templates/Herald Index.html" />
         <option value="$PROJECT_DIR$/index/DBRouter.py" />
-        <option value="$PROJECT_DIR$/index/views.py" />
         <option value="$PROJECT_DIR$/index/templates/mod_wiki.html" />
         <option value="$PROJECT_DIR$/index/conf.py" />
+        <option value="$PROJECT_DIR$/herald_index/settings.py" />
+        <option value="$PROJECT_DIR$/index/views.py" />
+        <option value="$PROJECT_DIR$/index/templates/mod_league.html" />
         <option value="$PROJECT_DIR$/index/models.py" />
       </list>
     </option>
@@ -260,6 +233,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="herald_index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="herald_index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="herald_index" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -423,8 +410,8 @@
       <method />
     </configuration>
     <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Python.views" />
-      <item index="1" class="java.lang.String" itemvalue="Django server.herald_index" />
+      <item index="0" class="java.lang.String" itemvalue="Django server.herald_index" />
+      <item index="1" class="java.lang.String" itemvalue="Python.views" />
     </list>
     <recent_temporary>
       <list size="1">
@@ -470,7 +457,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33390412" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33390412" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -547,13 +534,6 @@
         <state line="19" column="67" selection-start="1005" selection-end="1005" vertical-scroll-proportion="-6.785714" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/herald_index/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="26" selection-start="1038" selection-end="1038" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="50" selection-start="302" selection-end="302" vertical-scroll-proportion="0.46594006">
@@ -591,11 +571,6 @@
         <state line="47" column="44" selection-start="1813" selection-end="1813" vertical-scroll-proportion="-0.09615385" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index/templates/mod_league.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="146" column="8" selection-start="5719" selection-end="5719" vertical-scroll-proportion="0.6017964" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index/templates/mod_herald_hot.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="55" selection-start="760" selection-end="760" vertical-scroll-proportion="0.056886226" />
@@ -608,9 +583,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/herald_index/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="163" column="6" selection-start="5754" selection-end="5754" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index/templates/mod_wiki.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="24" selection-start="1162" selection-end="1162" vertical-scroll-proportion="-3.5">
+        <state line="2" column="21" selection-start="67" selection-end="67" vertical-scroll-proportion="-0.8772455">
           <folding />
         </state>
       </provider>
@@ -624,16 +606,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="1343" selection-end="1343" vertical-scroll-proportion="0.0">
+        <state line="70" column="13" selection-start="2227" selection-end="2227" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#54#90#0" expanded="true" />
+            <element signature="e#28#64#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index/templates/mod_league.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="52" selection-start="972" selection-end="972" vertical-scroll-proportion="6.107143">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="166" column="24" selection-start="4401" selection-end="4401" vertical-scroll-proportion="0.22651933">
+        <state line="221" column="37" selection-start="5892" selection-end="5892" vertical-scroll-proportion="0.57734805">
           <folding />
         </state>
       </provider>
