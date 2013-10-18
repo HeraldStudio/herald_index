@@ -2,6 +2,8 @@
 
 import os
 
+from index import conf
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -21,7 +23,7 @@ DATABASES = {
         'HOST': '127.0.0.1',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '3306',                      # Set to empty string for default.
     },
-    'leaguedb' : {
+    conf.DB_NAME_LEAGUE : {
         'ENGINE' : 'django.db.backends.mysql',
         'NAME' : 'mydb2',
         'USER' : 'root',
@@ -29,7 +31,7 @@ DATABASES = {
         'HOST' : '127.0.0.1',
         'PORT' : '3306'
     },
-    'wikidb' : {
+    conf.DB_NAME_WIKI : {
         'ENGINE' : 'django.db.backends.mysql',
         'NAME' : 'mydb3',
         'USER' : 'root',
@@ -38,6 +40,8 @@ DATABASES = {
         'PORT' : '3306'
     },
 }
+
+DATABASE_ROUTERS = ['index.DBRouter.IndexDBRouter']
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts

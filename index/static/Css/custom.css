@@ -52,7 +52,7 @@ a:link{
 /***@group nav******/
 
 nav {
-  font-size: 1.3em;
+ 
 }
 
 nav .navbar-brand{
@@ -70,9 +70,9 @@ nav .navbar-brand{
 
 /**End of wrapper****/
 /****@group information*****/
-#information .container{
+/* #information .container{
   padding: 2em 0;
-}
+} */
 
 #information h4{
   color: orange;

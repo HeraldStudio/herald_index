@@ -2,78 +2,76 @@
   <div class="container">
     <div class="row">
       <div id="informationTitle">
-        <h4 class="col-lg-offset-1 section-title">先声热点</h4>
+        <h4 class="col-sm-offset-1 col-md-offset-1 col-lg-offset-1 section-title " id="redian">先声热点</h4>
         <div class="clearfix"></div>
       </div>
-      <div id="informationMain" class="col-lg-offset-1 col-lg-7">
+      <div id="informationMain" class="col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-sm-7 col-md-7 col-lg-7">
         <div class="">
-          <h5>热点要闻<small><a href="{{ headline.url }}">{{ headline.title }}</a></small></h5>
-          <div class="col-lg-6 news">
-              {% for news in news_group1 %}
-                  <li><a href="{{ news.url }}">{{ news.title }}</a></li>
-              {% endfor %}
+          <h5>先声热点<small><a href="{{ headline.url }}">{{ headline.title }}</a></small></h5>
+          <div class="col-lg-6 col-md-6  col-sm-6 news">
+            {% for news in news_group1 %}
+              <li><a href="{{ news.url }}">{{ news.title }}</a></li>
+            {% endfor %}
           </div>
-          <div class="col-lg-6 news">
+          <div class="col-lg-6 col-md-6 col-sm-6 news">
             {% for news in news_group2 %}
-                  <li><a href="{{ news.url }}">{{ news.title }}</a></li>
-              {% endfor %}
+              <li><a href="{{ news.url }}">{{ news.title }}</a></li>
+            {% endfor %}
           </div>
           <div class="clearfix"></div>
-
           <h5>先声推荐<small>先声网成员倾情推荐</small></h5>
-          <div class="col-lg-6 recommand">
-              {% for rec in recs_group1 %}
+
+          <div class="col-lg-6 col-md-6 col-sm-6 recommand">
+
+          {% for rec in recs_group1 %}
+            <div>
+              <a href="" class="col-lg-4 col-md-4 col-sm-4  "><img src="{{ MEDIA_URL }}recommend\{{ rec.img_path }}" alt=""  class="img-responsive"></a>
+              <div class="col-lg-8 col-md-8 col-sm-8  ">
+                <a href="{{ rec.url }}"><b>{{ rec.title }}</b></a>
                 <div>
-                  <a href="" class="col-lg-4"><img src="{{ STATIC_URL }}{{ rec.img_path }}" alt=""></a>
-                  <div class="col-lg-8">
-                    <a href="{{ rec.url }}"><b>{{ rec.title }}</b></a>
-                    <div>
-                    {{ rec.intro }}
-                    </div>
-                  </div>
-                  <div class="clearfix"></div>
+                {{ rec.intro }}
                 </div>
-              {% endfor %}
+              </div>
+              <div class="clearfix"></div>
+            </div>
+           {% endfor %}
           </div>
 
-          <div class="col-lg-6 recommand">
-              {% for rec in recs_group2 %}
-                  <div>
-                  <a href="" class="col-lg-4"><img src="{{ STATIC_URL }}{{ rec.img_path }}" alt=""></a>
-                  <div class="col-lg-8">
-                    <a href="{{ rec.url }}"><b>{{ rec.title }}</b></a>
-                    <div>
-                    {{ rec.intro }}
-                    </div>
-                  </div>
-                  <div class="clearfix"></div>
+          <div class="col-lg-6 col-md-6 col-sm-6  recommand">
+          {% for rec in recs_group2 %}
+            <div>
+              <a href="" class="col-lg-4 col-md-4 col-sm-4  "><img src="{{ MEDIA_URL }}recommend\{{ rec.img_path }}" alt="" class="img-responsive"></a>
+              <div class="col-lg-8 col-md-8 col-sm-8  ">
+                <a href="{{ rec.url }}"><b>{{ rec.title }}</b></a>
+                <div>
+                {{ rec.intro }}
                 </div>
-              {% endfor %}
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          {% endfor %}
           </div>
 
         </div>
       </div>
 
-      <div id="informationRight" class="col-lg-4">
+
+      <div id="informationRight" class="col-lg-4 col-md-4 col-sm-4">
         <h5>校园网址</h5>
-        <div class="webnavigation col-lg-12">
-            <div class="webnavigation col-lg-12">
-            {% for link in links %}
-                {% ifequal link.hot_level 1 %}
-                    <span><a href="{{ link.url }}" style="color:orange;">{{ link.name }}</a></span>
-                {% else %}
-                    <span><a href="{{ link.url }}">{{ link.name }}</a></span>
-                {% endifequal %}
-            {% endfor %}
-
-            </div>
-
+        <div class="webnavigation col-lg-12 col-md-12 col-sm-12">
+        {% for link in links %}
+            {% ifequal link.hot_level 1 %}
+                <span><a href="{{ link.url }}" style="color:orange;">{{ link.name }}</a></span>
+            {% else %}
+                <span><a href="{{ link.url }}">{{ link.name }}</a></span>
+            {% endifequal %}
+        {% endfor %}
         </div>
         <div class="clearfix"></div>
         <h5>先声手机应用</h5>
         <div class="mobile">
-          <img src="{{ STATIC_URL }}Images/mobile.png" alt="">
-          <img src="{{ STATIC_URL }}Images/mobile.png" alt="">
+          <img src="{{ STATIC_URL }}Images/mobile.png" alt="" class="img-responsive">
+          <img src="{{ STATIC_URL }}Images/mobile.png" alt="" class="img-responsive">
         </div>
         <div>
         </div>

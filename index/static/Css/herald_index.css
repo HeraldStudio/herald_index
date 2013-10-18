@@ -30,21 +30,23 @@
     background-color:rgb(8, 247, 8);
    }
 .daohang{
-   background-color:#1F1F1F;
+   z-index:1000;
+   background-color:#D8D7D7;
    color:white; 
    font-size:20px;
    letter-spacing:8px;
    opacity:0.9;
 }
 .daohang li{
-      padding-top:15px;
-      padding-bottom:15px;
+      padding-top:10px;
+      padding-bottom:10px;
 	  cursor:pointer;
+	  list-style-type:none;
 }
 .fixed{
     position:fixed;
 	top:0;
-	left:0;
+	left:0px;
 }
 .header-font{
     font-size:20px;
@@ -95,40 +97,40 @@ word-break: break-all;
  margin-top:15px;
 }
 #nav_redian{
-	background-color: 
+	background-color: ;
 }
 #nav_huodong{
-	background-color:
+	background-color:;
 }
 #nav_ershou{
-	background-color: 
+	background-color: ;
 }
 #nav_shiwu{
-	background-color:
+	background-color:;
 }
 li#nav_redian:hover{
-	background-color: green;
-}
-li#nav_huodong:hover{
-	background-color:orange;
-}
-li#nav_ershou:hover{
-	background-color:blue; 
-}
-li#nav_shiwu:hover{
-	background-color: purple;
-}
-.active #nav_redian{
-	background-color: green; 
-}
-.active #nav_huodong{
 	background-color: orange;
 }
-.active #nav_ershou{
-	background-color: blue;
+li#nav_huodong:hover{
+	background-color:green;
+}
+li#nav_baike:hover{
+	background-color:#00a8f3; 
+}
+li#nav_shiwu:hover{
+	background-color: rgb(241, 145, 211);
+}
+.active #nav_redian{
+	background-color: orange; 
+}
+.active #nav_huodong{
+	background-color: green;
+}
+.active #nav_baike{
+	background-color:#00a8f3;
 }
 .active #nav_shiwu{
-	background-color: purple;
+	background-color: rgb(241, 145, 211);
 }
 .ft14 {
 font-size: 15px;
@@ -212,7 +214,9 @@ clear: both;
 .bottom-border{
   border-bottom:1px solid black;
 }
-
+.martop{
+    margin-top:52px;
+}
 
 
 

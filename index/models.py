@@ -5,7 +5,21 @@ from django.db import models
 
 import os
 
+import conf
+
 # Create your models here.
+
+# class Campus_site_links_Manager(models.Manager):
+#     def add_link(self, link_name, link_url, link_level):
+#         obj = Campus_site_links(name=link_name, url=link_url, hot_level=link_level)
+#         obj.save()
+
+LEAGUE_APP = conf.APP_NAME_LEAGUE
+WIKI_APP = conf.APP_NAME_WIKI
+HOT_APP = conf.APP_NAME_HOT
+
+
+###################  hot app db   ###################
 
 class Campus_site_links(models.Model):
     COMM = 0
@@ -22,6 +36,9 @@ class Campus_site_links(models.Model):
 
     def __unicode__(self):
         return self.name+","+self.url+","+ str(self.hot_level)
+
+    class Meta:
+        app_label = HOT_APP
 
 
 
@@ -58,6 +75,8 @@ class Herald_news_list_Manager(models.Manager):
 
 
 
+
+
 class Herald_news_list(models.Model):
     title = models.CharField(max_length=50) # 取决于首页标题的字数
     url = models.URLField(max_length=200)
@@ -68,6 +87,7 @@ class Herald_news_list(models.Model):
 
     class Meta:
         ordering = ['-date']
+        app_label = HOT_APP
 
     def __unicode__(self):
         return self.title + str(self.date)
@@ -93,20 +113,150 @@ class Recommend_list(models.Model):
     url = models.URLField(max_length=200)
     img_path = models.FilePathField(path=media_path,recursive=True,
                                     allow_files=True, allow_folders=True,
-                                    default=os.path.join(media_path, 'default.png'))
-    intro = models.CharField(max_length=50)
+                                    default=os.path.join(media_path, 'default.png').replace('\\', '/'))
+    intro = models.CharField(max_length=200)
     date = models.DateTimeField(auto_now=True)
 
     objects = Recommend_list_Manager()
 
     class Meta:
         ordering = ['-date']
+        app_label = HOT_APP
+
 
     def __unicode__(self):
         return self.title+str(self.date)
 
 
+###############  hot app db  ----     end   ##################
 
+
+###############  wiki app db   ##########################
+
+class Wiki_question_Manager(models.Manager):
+    def get_hot_questions(self, num):
+        ques = self.all().order_by('-skim_nums')
+        if len(ques)<num:
+            return ques
+        else:
+            return ques[0:num]
+
+    def get_new_questions(self, num):
+        ques = self.all().order_by('-ask_date')
+        if len(ques)<num:
+            return ques
+        else:
+            return ques[0:num]
+
+class Wiki_question(models.Model):
+    id = models.IntegerField()
+    title = models.CharField(max_length=200)
+    ask_date = models.DateTimeField()
+    skim_nums = models.IntegerField()
+
+    objects = Wiki_question_Manager()
+
+    class Meta:
+        app_label = WIKI_APP
+        db_table = conf.VIEW_NAME_WIKI_QUESTION
+
+class Recommend_entry_Manager(models.Manager):
+    def get_new_rec_entry(self, num):
+        entry = self.all().order_by("-publish_date")
+        if len(entry)<num:
+            return entry
+        else:
+            return entry[0:num]
+
+class Recommend_entry(models.Model):
+    id  = models.IntegerField()
+    title = models.CharField(max_length=50)
+    content = models.TextField(max_length=500)
+    img_href = models.CharField(max_length=200)
+    publish_date = models.DateTimeField()
+
+    objects = Recommend_entry_Manager()
+
+    class Meta:
+        db_table = conf.VIEW_NAME_WIKI_REC_ENTRY
+        app_label = conf.APP_NAME_WIKI
+
+class Entry_Manager(models.Manager):
+    def get_hot_entry(self, num):
+        entry = self.all().order_by("skim_nums")
+        if len(entry)<num:
+            return entry
+        else:
+            return entry[0:num]
+
+
+class Entry(models.Model):
+    id = models.IntegerField()
+    title = models.CharField(max_length=50)
+    skim_nums = models.IntegerField()
+
+    objects = Entry_Manager()
+
+    class Meta:
+        app_label = conf.APP_NAME_WIKI
+        db_table = conf.VIEW_NAME_WIKI_HOT_ENTRY
+
+
+################  wiki app db  ----    end   #########################
+
+###############   league app db   ########################
+
+class ActivityManager(models.Manager):
+    def get_latest_activity(self, num):
+        acts = self.all().order_by("release_time")
+        if len(acts)<num:
+            return acts
+        else:
+            return acts[0:num]
+
+    def get_hot_activity(self, num):
+        acts = self.all().order_by("hits_on")
+        if len(acts)<num:
+            return acts
+        else:
+            return acts[0:num]
+
+class Activity(models.Model):
+    id = models.IntegerField()
+    name = models.CharField(max_length=255)
+    post_add = models.CharField(max_length=255)
+    release_time = models.CharField()
+    hits_on = models.IntegerField()
+
+    objects = ActivityManager()
+
+    class Meta:
+        app_label = conf.APP_NAME_LEAGUE
+        db_table = conf.VIEW_NAME_LEAGUE_ACTIVITY
+
+
+class AlbumManager(models.Manager):
+    def get_latest_album(self, num):
+        album = self.all().order_by("pub_date")
+        if len(album)<num:
+            return album
+        else:
+            return album[0:num]
+
+class Album(models.Model):
+    id = models.IntegerField()
+    cover_address = models.CharField(max_length=255)
+    pub_date = models.DateTimeField()
+
+    objects = AlbumManager()
+
+    class Meta:
+        app_label = conf.APP_NAME_LEAGUE
+        db_table = conf.VIEW_NAME_LEAGUE_ALBUM
+
+
+
+##############   league app db   ----- end   #################
 
 
 
