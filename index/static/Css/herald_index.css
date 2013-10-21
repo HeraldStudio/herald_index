@@ -96,18 +96,18 @@ word-break: break-all;
 .links_img img {
  margin-top:15px;
 }
-#nav_redian{
-	background-color: ;
-}
-#nav_huodong{
-	background-color:;
-}
-#nav_ershou{
-	background-color: ;
-}
-#nav_shiwu{
-	background-color:;
-}
+/*#nav_redian{*/
+	/*background-color: #555;*/
+/*}*/
+/*#nav_huodong{*/
+	/*background-color:#555;*/
+/*}*/
+/*#nav_ershou{*/
+	/*background-color:#555 ;*/
+/*}*/
+/*#nav_shiwu{*/
+	/*background-color:#555;*/
+/*}*/
 li#nav_redian:hover{
 	background-color: orange;
 }

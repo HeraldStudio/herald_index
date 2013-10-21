@@ -16,3 +16,6 @@ VIEW_NAME_WIKI_HOT_ENTRY = "tip_view"
 
 VIEW_NAME_LEAGUE_ACTIVITY = "activityinfo"
 VIEW_NAME_LEAGUE_ALBUM = "leaguealbum"
+
+
+ITEM_NUM_IN_ONE_PAGE = 20

@@ -40,26 +40,58 @@
             <thead>
                 <tr>
                     <th>名称</th>
+                    <th>热度顶级</th>
                     <th>修改</th>
                     <th>删除</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th><span><a href="#">教务处</a></span></th>
-                    <th><button class="btn btn-warning btn-mini">修改</button></th>
-                    <th><button class="btn btn-danger btn-mini">删除</button></th>
-                </tr>
-                <tr>
-                    <th><span><a href="#">教务处</a></span></th>
-                    <th><button class="btn btn-warning btn-mini">修改</button></th>
-                    <th><button class="btn btn-danger btn-mini">删除</button></th>
-                </tr>
+                {% for link in link_list %}
+                    <tr>
+                        <td><span><a href="{{ link.url }}">{{ link.name }}</a></span></td>
+                        <td class="hide">{{ link.id }}</td>
+                        <td><span>{{ link.hot_level }}</span></td>
+                        <td><button class="btn btn-warning btn-mini" onclick="modify_link(this);">修改</button></td>
+                        <td><button class="btn btn-danger btn-mini" onclick="delete_link(this);">删除</button></td>
+                    </tr>
+                {% endfor %}
             </tbody>
         </table>
-        <ul class="pager">
-            <li><a href="#">&larr; 上一页</a></li>
-            <li><a href="#">下一页 &rarr;</a></li>
-        </ul>
+{#        <ul class="pager">#}
+{#            <li><a href="#">&larr; 上一页</a></li>#}
+{#            <li><a href="#">下一页 &rarr;</a></li>#}
+{#        </ul>#}
+            <div id="modify_link_modal" class="modal hide fade">
+                <div class="modal-header">
+                    <span>修改链接</span>
+                </div>
+                <div class="modal-body">
+                    <div class="control-group">
+                        <label for="link_pop_name" class="control-label">名称</label>
+                        <div class="controls controls-row">
+                            <input type="text" id="link_pop_name" class="input-xxlarge">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label for="link_pop_link" class="control-label">链接</label>
+                        <div class="controls controls-row">
+                            <input type="text" id="link_pop_link" class="input-xxlarge">
+                        </div>
+                    </div>
+                    <div class="control-group inline">
+                        <label class="control-label" for="link_pop_level">热度等级</label>
+                        <div class="controls">
+                            <select id="link_pop_level">
+                                <option>0</option>
+                                <option>1</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" id="pop_pub_link">发布</button>
+                    <a href="#" class="btn" data-dismiss="modal" aria-hidden="true">关闭</a>
+                </div>
+            </div>
     </div>
 </div>

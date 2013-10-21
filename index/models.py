@@ -21,6 +21,26 @@ HOT_APP = conf.APP_NAME_HOT
 
 ###################  hot app db   ###################
 
+class Campus_site_link_Manager(models.Manager):
+    def delete_link(self, lid):
+        try:
+            link = self.get(id=lid)
+            link.delete()
+            return True
+        except:
+            return False
+
+    def update_link(self, id, name, url, level):
+        try:
+            link = self.get(id=id)
+            link.name = name
+            link.url = url
+            link.hot_level = level
+            link.save()
+            return True
+        except Exception,e:
+            return False
+
 class Campus_site_links(models.Model):
     COMM = 0
     HOT = 1
@@ -33,6 +53,7 @@ class Campus_site_links(models.Model):
     hot_level = models.IntegerField(max_length=1,
                                     choices=HOT_LEVEL,
                                     default=COMM) # 热度、点击量等级，可以取两种值：0代表普通，1代表热门
+    objects = Campus_site_link_Manager()
 
     def __unicode__(self):
         return self.name+","+self.url+","+ str(self.hot_level)
@@ -47,7 +68,12 @@ class Herald_news_list_Manager(models.Manager):
     def get_headline(self):
         headlines = self.filter(is_headline=True)
         if len(headlines):
-            return headlines[0]
+            tmp_headline = headlines[0]
+            if len(tmp_headline.title)>20:
+                tmp_headline.title = tmp_headline.title[0:20]+"..."
+                return tmp_headline
+            else:
+                return tmp_headline
         else:
             return None
 
@@ -61,17 +87,41 @@ class Herald_news_list_Manager(models.Manager):
         news = self.all()
         news_list = []
         meet_head = False
+        tmp_news_list = []
         for news_item in news:
             if news_item.is_headline and (not meet_head):
                 meet_head = True
             else:
                 news_list.append(news_item)
         if len(news_list)>=end:
-            return news_list[begin:end]
+            tmp_news_list = news_list[begin:end]
         elif len(news_list)<=begin:
-            return []
+            tmp_news_list = []
         else:
-            return news_list[begin:]
+            tmp_news_list = news_list[begin:]
+        for news in tmp_news_list:
+            if len(news.title)>18:
+                news.title = news.title[0:18]+"..."
+        return tmp_news_list
+
+    def delete_news(self, id):
+        try:
+            news = self.get(id = id)
+            news.delete()
+            return True
+        except Exception,e:
+            return False
+
+    def update_news(self, id,title, url, is_headline):
+        try:
+            news = self.get(id = id)
+            news.title = title
+            news.url = url
+            news.is_headline = is_headline
+            news.save()
+            return True
+        except:
+            return False
 
 
 
@@ -99,12 +149,43 @@ class Recommend_list_Manager(models.Manager):
 
     def get_some_recommends(self, begin, end):
         recs = self.all()
+        import logging
+        logger = logging.getLogger("index")
+
+        tmp_recs = []
         if len(recs)>=end:
-            return recs[begin:end]
+            tmp_recs = recs[begin:end]
         elif len(recs)<=begin:
-            return []
+            tmp_recs = []
         else:
-            return recs[begin:]
+            tmp_recs = recs[begin:]
+        for rec in tmp_recs:
+            logger.info("标题长度:"+str(len(rec.title)))
+            if len(rec.intro)>60:
+                rec.intro = rec.intro[0:60]+"..."
+            if len(rec.title)>25:
+                rec.title = rec.title[0:25]+"..."
+        return tmp_recs
+
+    def delete_rec(self, rid):
+        try:
+            rec = self.get(id=rid)
+            rec.delete()
+            return True
+        except:
+            return False
+
+    def update_rec(self, id, title, url, img_path, intro):
+        try:
+            rec = self.get(id=id)
+            rec.title = title
+            rec.url = url
+            rec.img_path = img_path
+            rec.intro = intro
+            rec.save()
+            return True
+        except:
+            return False
 
 
 class Recommend_list(models.Model):
@@ -136,10 +217,15 @@ class Recommend_list(models.Model):
 class Wiki_question_Manager(models.Manager):
     def get_hot_questions(self, num):
         ques = self.all().order_by('-skim_nums')
+        tmp_ques = []
         if len(ques)<num:
-            return ques
+            tmp_ques = ques
         else:
-            return ques[0:num]
+            tmp_ques = ques[0:num]
+        for q in tmp_ques:
+            if len(q.title)>20:
+                q.title = q.title[0:20]+"..."
+        return tmp_ques
 
     def get_new_questions(self, num):
         ques = self.all().order_by('-ask_date')
@@ -167,10 +253,17 @@ class Recommend_entry_Manager(models.Manager):
         logger = logging.getLogger("index")
         entry = self.all().order_by("-publish_date")
         # logger.info("推荐词条共："+str(len(entry)))
+        tmp_entry = []
         if len(entry)<num:
-            return entry
+            tmp_entry = entry
         else:
-            return entry[0:num]
+            tmp_entry = entry[0:num]
+        for e in tmp_entry:
+            if len(e.content)>100:
+                e.content = e.content[0:150]+"..."
+            if len(e.title)>20:
+                e.title = e.title[0:13]+"..."
+        return tmp_entry
 
 class Recommend_entry(models.Model):
     id  = models.IntegerField()
@@ -213,17 +306,29 @@ class Entry(models.Model):
 class ActivityManager(models.Manager):
     def get_latest_activity(self, num):
         acts = self.all().order_by("release_time")
+        tmp_acts = []
         if len(acts)<num:
-            return acts
+            tmp_acts = acts
         else:
-            return acts[0:num]
+            tmp_acts = acts[0:num]
+        for act in tmp_acts:
+            if len(act.name)>8:
+                act.name = act.name[0:8]+"..."
+        return tmp_acts
 
     def get_hot_activity(self, num):
         acts = self.all().order_by("-hits_on")
+        tmp_acts=[]
         if len(acts)<num:
-            return acts
+            tmp_acts = acts
         else:
-            return acts[0:num]
+            tmp_acts = acts[0:num]
+        for act in tmp_acts:
+            if len(act.name)>15:
+                act.name = act.name[0:15]+"..."
+            if len(act.place)>16:
+                act.place = act.place[0:16]+"..."
+        return  tmp_acts
 
 class Activity(models.Model):
     id = models.IntegerField()
@@ -265,7 +370,17 @@ class Album(models.Model):
 ##############   league app db   ----- end   #################
 
 
+########     wrapper  #########################
 
+class Wrapper(models.Model):
+    title = models.CharField(max_length=20)
+    intro = models.CharField(max_length=100)
+    tip = models.CharField(max_length=10)
+    tip_url = models.URLField(max_length=100)
+    img_path = models.FilePathField()
+
+
+##############   wrapper db   ---------end   ##############
 
 
 

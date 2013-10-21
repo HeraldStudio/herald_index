@@ -36,16 +36,6 @@ function setCsrfHeader()
 
 
 
-
-$(document).ready(function(){
-    setPubLinkClick();
-    setPubNewsClick();
-    setResetLinkClick();
-    setResetNewsClick();
-    setPubRecClick();
-    setResetRecClick();
-});
-
 function setPubLinkClick()
 {
     $("#pub_link").click(function(){
@@ -84,11 +74,13 @@ function resetLink()
 function setPubNewsClick()
 {
     $("#pub_news").click(function(){
+        alert("pub news click");
         data = {
             "title":$("#title").val(),
             "link":$("#link").val(),
-            "headline":$("#headline").val()
+            "headline":$("#headline").is(":checked")
         }
+        alert($("#headline").is(":checked"));
         setCsrfHeader();
         $.post("/index/admin/save_news/", data, function(rd, status){
             resetNews();

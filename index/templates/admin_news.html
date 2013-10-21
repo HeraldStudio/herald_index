@@ -37,30 +37,63 @@
             <thead>
                 <tr>
                     <th>标题</th>
+                    <th>发布日期</th>
                     <th>修改</th>
                     <th>删除</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <th><span><a href="#">2014年春季申请赴台湾云林科技大学交流学习报名通知</a></span></th>
-                    <th><button class="btn btn-mini btn-warning">修改</button></th>
-                    <th><button class="btn btn-mini btn-danger">删除</button></th>
-                </tr>
-                <tr>
-                    <th><span><a href="#">2014年春季申请赴台湾云林科技大学交流学习报名通知</a></span></th>
-                    <th><button class="btn btn-mini btn-warning">修改</button></th>
-                    <th><button class="btn btn-mini btn-danger">删除</button></th>
-                </tr>
+            <tbody id="news_tbody">
+                {% for news in news_list %}
+                    <tr id="{{ news.id }}">
+                        <td><span><a href="{{ news.url }}">{{ news.title }}</a></span></td>
+                        <td class="hide">{{ news.is_headline }}</td>
+                        <td><span>{{ news.date }}</span></td>
+                        <td><button class="btn btn-mini btn-warning btn_mod" onclick="modify_news(this);" >修改</button></td>
+                        <td><button class="btn btn-mini btn-danger btn_del" onclick="deleteNews(this);" >删除</button></td>
+                    </tr>
+                {% endfor %}
+
             </tbody>
             <div class="pageination">
                 <ul class="pager">
-                <li><a href="#">&larr; Newer</a></li>
-                <li><a href="#">Older &rarr;</a></li>
+                <li ><a href="#" id="news_pre_page">&larr; Newer</a></li>
+                <li ><a href="#" id="news_next_page">Older &rarr;</a></li>
                 </ul>
             </div>
 
             </table>
+
         </div>
+
+        <div id="modify_news_modal" class="modal hide fade">
+            <div class="modal-header">
+                <span>修改新闻</span>
+            </div>
+            <div class="modal-body">
+                <div class="control-group">
+                    <label for="new_pop_title" class="control-label">标题</label>
+                    <div class="controls controls-row">
+                        <input type="text" id="news_pop_title" class="input-xxlarge">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label for="news_pop_link" class="control-label">链接</label>
+                    <div class="controls controls-row">
+                        <input type="text" id="news_pop_link" class="input-xxlarge">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="controls controls-row">
+                        <input type="checkbox" value="1" id="news_pop_headline">设为头条
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" id="news_pop_pub_news">发布</button>
+                <a href="#" class="btn" data-dismiss="modal" aria-hidden="true">关闭</a>
+            </div>
+        </div>
+
+
     </div>
 </div>

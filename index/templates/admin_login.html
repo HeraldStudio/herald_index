@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>管理员登陆</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" href="{{ STATIC_URL }}bootstrap2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}bootstrap2/css/bootstrap-responsive.min.css">
+</head>
+<body>
+    <div class="container">
+        <form action="" method="post" class="form-horizontal">
+            {% csrf_token %}
+            <legend>首页管理员登陆</legend>
+            <p class="text-error" >{{ error }}</p>
+            <div class="control-group">
+                <label for="username" class="control-label">用户名</label>
+                <div class="controls">
+                    <input id="username" type="text" name="username">
+                </div>
+            </div>
+            <div class="control-group">
+                <label for="password" class="control-label">密码</label>
+                <div class="controls">
+                    <input id="password" type="password" name="password">
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <button type="submit" class="btn">登陆</button>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+
+
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="{{ STATIC_URL }}bootstrap2/js/bootstrap.min.js"></script>
+</body>
+</html>
