@@ -1,0 +1,39 @@
+<div class="tab-pane" id="tab5">
+    <form class="form-horizontal" enctype="multipart/form-data" > <!-- method="post" action="/index/admin/save_recommend/" -->
+         {% csrf_token %}
+        <legend>发布应用</legend>
+        <div class="control-group inline">
+            <label class="control-label" for="app_name">应用名称</label>
+            <div class="controls">
+                <input type="text" class="input-xxlarge" placeholder="不超过50字" id="app_name" name="app_name">
+            </div>
+        </div>
+        <div class="control-group inline">
+            <label class="control-label" for="app_link">点击链接</label>
+            <div class="controls">
+                <input type="text" class="input-xxlarge" placeholder="不超过50字" id="app_link" name="app_link">
+            </div>
+        </div>
+        <div class="controls-group">
+            <label class="control-label" for="app_up_pic">上传图片</label>
+            <div class="controls">
+                <input type="file" id="app_up_pic" name="app_up_pic">
+                <span class="help-block">（注意上传的图片的长宽比和大小！！）</span>
+            </div>
+        </div>
+
+        <div class="controls-group">
+            <label class="control-label" for="app_intro">简介</label>
+            <div class="controls">
+                <textarea rows="3" class="input-xxlarge" id="app_intro" name="app_intro"></textarea>
+            </div>
+        </div>
+        <div class="form-actions">
+            <div class="controls">
+                <button type="submit" class="btn btn-primary" id="pub_app">发布</button>
+                <button type="button" class="btn" name="reset_app">重置</button>
+            </div>
+        </div>
+    </form>
+
+</div>

@@ -21,5 +21,9 @@ $(document).ready(function(){
     setRecNextPage();
     setRecPrePage();
     setModLink();
+    setPubWrapper();
+    setResetWrapper();
+    setWrapperNumClick();
+    setPubAppClick();
 });
 

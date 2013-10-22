@@ -372,15 +372,75 @@ class Album(models.Model):
 
 ########     wrapper  #########################
 
+class Wrapper_Manager(models.Manager):
+    def save_wrapper(self,title, intro, tip, tip_url, img_name):
+        try:
+            obj = Wrapper(title=title, intro=intro, tip=tip, tip_url=tip_url, img_name=img_name)
+            obj.save()
+            return True
+        except:
+            return False
+
+    def get_latest_wrapper(self, num):
+        wrapper = self.all().order_by("-date")
+        if len(wrapper)>num:
+            return wrapper[0:num]
+        else:
+            return wrapper
+
 class Wrapper(models.Model):
     title = models.CharField(max_length=20)
     intro = models.CharField(max_length=100)
     tip = models.CharField(max_length=10)
     tip_url = models.URLField(max_length=100)
-    img_path = models.FilePathField()
+    img_name = models.FilePathField()
+    date = models.DateTimeField(auto_now=True)
+
+    objects = Wrapper_Manager()
+
+    def __unicode__(self):
+        return self.title
+
+    class Meta:
+        app_label = HOT_APP
 
 
 ##############   wrapper db   ---------end   ##############
+
+#############   app   ######################
+
+class App_Manager(models.Manager):
+    def get_latest_app(self, num):
+        apps = self.all().order_by('-date')
+        if len(apps)>num:
+            return apps[0:num]
+        else:
+            return apps
+
+    def save_app(self, name, intro, down_url, img_name):
+        try:
+            app = App(name=name, intro=intro, down_url=down_url, img_name=img_name)
+            app.save()
+            return True
+        except:
+            return False
+
+class App(models.Model):
+    name = models.CharField(max_length=20)
+    intro = models.CharField(max_length=50)
+    down_url = models.CharField(max_length=100)
+    img_name = models.FilePathField()
+    date = models.DateTimeField(auto_now=True)
+
+    objects = App_Manager()
+
+    def __unicode__(self):
+        return self.name
+
+    class Meta:
+        app_label = HOT_APP
+
+###########  app   db  ----------end   ########
 
 
 

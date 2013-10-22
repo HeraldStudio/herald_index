@@ -16,12 +16,15 @@ class IndexDBRouter(object):
         if db == IndexDBRouter.LEAGUEDB or db == IndexDBRouter.WIKIDB:
             return False
         if db == IndexDBRouter.HOTDB:
+            if model._meta.app_label==IndexDBRouter.HOTAPP:
+                return True
             return not (model._meta.app_label == IndexDBRouter.LEAGUEAPP or
             model._meta.app_label == IndexDBRouter.WIKIAPP )
 
+
     def db_for_write(self, model, **hints):
         if not model._meta.app_label == IndexDBRouter.HOTAPP:
-            return None
+            return False
         else:
             return conf.DB_NAME_DEFAULT
 

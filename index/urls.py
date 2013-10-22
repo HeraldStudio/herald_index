@@ -22,7 +22,11 @@ urlpatterns += patterns("index",
     url(r'^admin/upload_rec_pic/$', "views_admin.upload_rec_pic"),
     url(r"^admin/async_news/$", "views_admin.get_async_news"),
     url(r"^admin/async_rec/$" , "views_admin.get_async_recommend"),
-
+    url(r'^admin/upload_wrapper_pic/$', "views_admin.upload_wrapper_img"),
+    url(r"^admin/save_wrapper/$", "views_admin.save_wrapper_obj"),
+    url(r"^admin/set_wrapper_num/$", "views_admin.set_wrapper_num"),
+    url(r"^admin/upload_app_pic/$", "views_admin.upload_app_pic"),
+    url(r"^admin/save_app/$", "views_admin.save_app"),
 )
 
 

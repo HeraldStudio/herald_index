@@ -15,14 +15,18 @@
 		</div>
 		<div class="tabbable tabs-left">
 			<ul class="nav nav-tabs">
+                <li><a href="#tab4" data-toggle="tab">轮播屏</a></li>
 				<li class="active"><a href="#tab1" data-toggle="tab">热点新闻</a></li>
 				<li><a href="#tab2" data-toggle="tab">先声推荐</a></li>
 				<li><a href="#tab3" data-toggle="tab">链接管理</a></li>
+                <li><a href="#tab5" data-toggle="tab">应用管理</a></li>
 			</ul>
 			<div class="tab-content">
+                {% include "admin_wrapper.html" %}
                 {% include "admin_news.html" %}
                 {% include "admin_recommend.html" %}
                 {% include "admin_link.html" %}
+                {% include "admin_app.html" %}
 			</div>
 		</div>
 		
@@ -40,6 +44,6 @@
     <script type="text/javascript" src="{{ STATIC_URL }}custom_js/ajaxfileupload.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}custom_js/admin.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}custom_js/admin_update.js"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}custom_js/ready.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}custom_js/admin_ready.js"></script>
 	</body>
 </html>

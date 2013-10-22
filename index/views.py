@@ -8,6 +8,7 @@ from django.template import RequestContext
 import models
 import os
 from herald_index import settings
+import  conf
 
 WIKI_TIP_HALF_URL = ""
 WIKI_QUES_HALF_URL = "http://herald.seu.edu.cn/xyzn/faq/question/"
@@ -69,13 +70,35 @@ def get_league_dic():
     return dic
 
 
+def get_wrapper():
+    wrapper = models.Wrapper.objects.get_latest_wrapper(conf.WRAPPER_NUM)
+    logger.debug("wrapper有："+ str(len(wrapper)))
+    dic = {
+        "wrapper":wrapper
+    }
+    return dic
+
+def get_app():
+    apps = models.App.objects.get_latest_app(conf.APP_NUM)
+    dic = {
+        "apps":apps
+    }
+    return dic
+
+
+
 def index(request):
     dics = {}
+    ####  ori dics
     dics.update(get_hot_dic())
-    dics.update(get_wiki_dic())
-    dics.update(get_league_dic())
+    dics.update(get_wrapper())
+    dics.update(conf.URL_DIC)
+    dics.update(get_app())
+    #### module dic  added here   #####
+    #dics.update(get_wiki_dic())   ##### wiki module
+    #dics.update(get_league_dic())    ######  league  module
 
-    return render_to_response("Herald Index.html", dics, RequestContext(request))
+    return render_to_response("herald_index.html", dics, RequestContext(request))
 
 
 

@@ -5,37 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index/templates/admin_login.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index/static/custom_js/admin_update.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index/static/custom_js/ready.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index/tools.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index/views_admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/templates/Herald Index.html" afterPath="$PROJECT_DIR$/index/templates/Herald Index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index/templates/admin_app.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index/templates/admin_wrapper.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index/static/custom_js/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/DBRouter.py" afterPath="$PROJECT_DIR$/index/DBRouter.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/templates/admin.html" afterPath="$PROJECT_DIR$/index/templates/admin.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/static/custom_js/admin.js" afterPath="$PROJECT_DIR$/index/static/custom_js/admin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/templates/admin_link.html" afterPath="$PROJECT_DIR$/index/templates/admin_link.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/templates/admin_news.html" afterPath="$PROJECT_DIR$/index/templates/admin_news.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/templates/admin_recommend.html" afterPath="$PROJECT_DIR$/index/templates/admin_recommend.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/conf.py" afterPath="$PROJECT_DIR$/index/conf.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/templates/footer.html" afterPath="$PROJECT_DIR$/index/templates/footer.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/templates/header.html" afterPath="$PROJECT_DIR$/index/templates/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/static/Css/herald_index.css" afterPath="$PROJECT_DIR$/index/static/Css/herald_index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/templates/mod_herald_hot.html" afterPath="$PROJECT_DIR$/index/templates/mod_herald_hot.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/templates/mod_league.html" afterPath="$PROJECT_DIR$/index/templates/mod_league.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/models.py" afterPath="$PROJECT_DIR$/index/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/herald_index/settings.py" afterPath="$PROJECT_DIR$/herald_index/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/templates/tab.html" afterPath="$PROJECT_DIR$/index/templates/tab.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/herald_index/urls.py" afterPath="$PROJECT_DIR$/herald_index/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/urls.py" afterPath="$PROJECT_DIR$/index/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/views.py" afterPath="$PROJECT_DIR$/index/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/views_admin.py" afterPath="$PROJECT_DIR$/index/views_admin.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index/templates/wrapper.html" afterPath="$PROJECT_DIR$/index/templates/wrapper.html" />
+      <change type="MOVED" beforePath="F:\Workspace-Py\herald_index\index\static\custom_js\ready.js" afterPath="$PROJECT_DIR$/index/static/custom_js/admin_ready.js" />
+      <change type="MOVED" beforePath="F:\Workspace-Py\herald_index\index\templates\Herald Index.html" afterPath="$PROJECT_DIR$/index/templates/herald_index.html" />
     </list>
     <ignored path="herald_index.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/urls.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382371004322" ignored="false" />
-    <file path="/views.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382162610976" ignored="false" />
+    <file path="/urls.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382430967765" ignored="false" />
+    <file path="/views.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382433834620" ignored="false" />
     <file path="/wsgi.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1381726454878" ignored="false" />
-    <file path="/settings.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382062016228" ignored="false" />
-    <file path="/models.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382380328292" ignored="false" />
+    <file path="/settings.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382414017186" ignored="false" />
+    <file path="/models.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382429474564" ignored="false" />
     <file path="F:/Workspace/yichat/app/views.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1381890457597" ignored="false" />
     <file path="F:/Workspace/yichat/xchat/urls.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1381889066508" ignored="false" />
     <file path="F:/Workspace/yichat/xchat/settings.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1381889066508" ignored="false" />
@@ -50,33 +47,39 @@
     <file path="F:/Workspace/yichat/logs/all.log" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1381890504652" ignored="false" />
     <file path="F:/Workspace/yichat/app/request_menu.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1381898698346" ignored="false" />
     <file path="/request_menu.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1381898697954" ignored="false" />
-    <file path="/Dummy.txt" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382323485218" ignored="false" />
-    <file path="/admin.html" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382353722070" ignored="false" />
+    <file path="/Dummy.txt" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382423380639" ignored="false" />
+    <file path="/admin.html" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382429701986" ignored="false" />
     <file path="/admin_link.html" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382359455336" ignored="false" />
     <file path="/admin_news.html" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382338819708" ignored="false" />
-    <file path="/admin.js" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382266384176" ignored="false" />
+    <file path="/admin.js" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382430814672" ignored="false" />
     <file path="/admin_recommend.html" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382352501782" ignored="false" />
-    <file path="/mod_herald_hot.html" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382162562646" ignored="false" />
+    <file path="/mod_herald_hot.html" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382434631604" ignored="false" />
     <file path="/IndexDBRouter.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382000973961" ignored="false" />
-    <file path="/DBRouter.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382031061473" ignored="false" />
+    <file path="/DBRouter.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382414874240" ignored="false" />
     <file path="/config.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382013084316" ignored="false" />
-    <file path="/conf.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382329685091" ignored="false" />
+    <file path="/conf.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382431672754" ignored="false" />
     <file path="/mod_wiki.html" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382060763401" ignored="false" />
     <file path="/mod_league.html" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382106315872" ignored="false" />
-    <file path="/Herald Index.html" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382097956877" ignored="false" />
-    <file path="/tab.html" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382108090456" ignored="false" />
-    <file path="/header.html" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382118261007" ignored="false" />
-    <file path="/wrapper.html" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382152955874" ignored="false" />
+    <file path="/Herald Index.html" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382426629615" ignored="false" />
+    <file path="/tab.html" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382433350346" ignored="false" />
+    <file path="/header.html" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382428245307" ignored="false" />
+    <file path="/wrapper.html" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382418636879" ignored="false" />
     <file path="/tmp.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382247423574" ignored="false" />
     <file path="/tools.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382159718178" ignored="false" />
     <file path="/view_admin.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382196687858" ignored="false" />
-    <file path="/views_admin.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382378511865" ignored="false" />
+    <file path="/views_admin.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382431162900" ignored="false" />
     <file path="/admin_update.js" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382361393878" ignored="false" />
     <file path="$USER_HOME$/Desktop/herald_web_service/seulibrary/crawler_library/library_service.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382238816838" ignored="false" />
     <file path="/library_service.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382238747550" ignored="false" />
     <file path="$USER_HOME$/Desktop/herald_web_service/seulibrary/crawler_library/page_parser.py" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382238830470" ignored="false" />
-    <file path="/ready.js" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382360797701" ignored="false" />
+    <file path="/ready.js" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382382556805" ignored="false" />
     <file path="/admin_login.html" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382379841118" ignored="false" />
+    <file path="/admin_wrapper.html" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382425672059" ignored="false" />
+    <file path="/index.js" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382426930461" ignored="false" />
+    <file path="/admin_ready.js" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382431328145" ignored="false" />
+    <file path="/footer.html" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382432022511" ignored="false" />
+    <file path="/admin_app.html" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382429937248" ignored="false" />
+    <file path="/herald_index.html" changelist="52b21d53-010e-4ed8-a6e5-b3ad59c5953a" time="1382433198048" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,10 +99,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="admin_update.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index/static/custom_js/admin_update.js">
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="355" column="35" selection-start="8975" selection-end="8975" vertical-scroll-proportion="0.0">
+            <state line="98" column="60" selection-start="2809" selection-end="2809" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="herald_index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index/templates/herald_index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="37" selection-start="1094" selection-end="1094" vertical-scroll-proportion="-6.785714">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mod_herald_hot.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index/templates/mod_herald_hot.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="73" column="62" selection-start="2902" selection-end="2902" vertical-scroll-proportion="0.26755852">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index/templates/footer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="0" selection-start="777" selection-end="777" vertical-scroll-proportion="-7.464286">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="440" column="27" selection-start="12050" selection-end="12050" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -108,66 +147,8 @@
       <file leaf-file-name="conf.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index/conf.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="25" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0">
+            <state line="24" column="11" selection-start="442" selection-end="442" vertical-scroll-proportion="0.0">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index/templates/admin.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="416" selection-end="416" vertical-scroll-proportion="0.6785714">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wrapper.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index/templates/wrapper.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="22" selection-start="179" selection-end="179" vertical-scroll-proportion="-2.7142856">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ready.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index/static/custom_js/ready.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="17" selection-start="427" selection-end="427" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#145#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="379" column="36" selection-start="10442" selection-end="10442" vertical-scroll-proportion="0.60882354">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="22" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/herald_index/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="43" selection-start="681" selection-end="681" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#51#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -175,10 +156,37 @@
       <file leaf-file-name="views_admin.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index/views_admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="13" selection-start="796" selection-end="796" vertical-scroll-proportion="0.0">
+            <state line="348" column="37" selection-start="10605" selection-end="10605" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#28#39#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/herald_index/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="18" selection-start="1460" selection-end="1460" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index/static/custom_js/admin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="296" column="12" selection-start="6525" selection-end="6525" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin_ready.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index/static/custom_js/admin_ready.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="17" selection-start="427" selection-end="427" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -202,22 +210,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/index/views.py" />
-        <option value="$PROJECT_DIR$/index/view_admin.py" />
-        <option value="$PROJECT_DIR$/index/tmp.py" />
-        <option value="$PROJECT_DIR$/index/static/custom_js/admin.js" />
-        <option value="$PROJECT_DIR$/index/templates/admin_news.html" />
-        <option value="$PROJECT_DIR$/index/templates/admin_recommend.html" />
-        <option value="$PROJECT_DIR$/index/templates/admin.html" />
-        <option value="$PROJECT_DIR$/index/templates/admin_link.html" />
-        <option value="$PROJECT_DIR$/index/static/custom_js/ready.js" />
-        <option value="$PROJECT_DIR$/index/static/custom_js/admin_update.js" />
-        <option value="$PROJECT_DIR$/index/conf.py" />
-        <option value="$PROJECT_DIR$/index/urls.py" />
-        <option value="$PROJECT_DIR$/herald_index/urls.py" />
-        <option value="$PROJECT_DIR$/index/views_admin.py" />
-        <option value="$PROJECT_DIR$/index/templates/admin_login.html" />
+        <option value="$PROJECT_DIR$/index/static/custom_js/index.js" />
+        <option value="$PROJECT_DIR$/index/templates/header.html" />
         <option value="$PROJECT_DIR$/index/models.py" />
+        <option value="$PROJECT_DIR$/index/templates/admin.html" />
+        <option value="$PROJECT_DIR$/index/templates/admin_app.html" />
+        <option value="$PROJECT_DIR$/index/urls.py" />
+        <option value="$PROJECT_DIR$/index/static/custom_js/admin.js" />
+        <option value="$PROJECT_DIR$/index/views_admin.py" />
+        <option value="$PROJECT_DIR$/index/static/custom_js/admin_ready.js" />
+        <option value="$PROJECT_DIR$/index/conf.py" />
+        <option value="$PROJECT_DIR$/index/templates/footer.html" />
+        <option value="$PROJECT_DIR$/index/templates/herald_index.html" />
+        <option value="$PROJECT_DIR$/index/templates/tab.html" />
+        <option value="$PROJECT_DIR$/index/views.py" />
+        <option value="$PROJECT_DIR$/herald_index/settings.py" />
+        <option value="$PROJECT_DIR$/index/templates/mod_herald_hot.html" />
       </list>
     </option>
   </component>
@@ -314,24 +322,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="herald_index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="herald_index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="herald_index" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -343,14 +333,14 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="editor.preferences.appearance" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/herald_web_service" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -481,6 +471,20 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
       <option name="VM_PARAMETERS" value="" />
       <option name="USER_CFG_CLASS" />
@@ -557,10 +561,9 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.325" sideWeight="0.6660959" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33030304" sideWeight="0.6660959" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -569,6 +572,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -635,120 +639,118 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index/static/custom_js/admin.js">
+    <entry file="file://$PROJECT_DIR$/index/templates/admin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="26" selection-start="1752" selection-end="1752" vertical-scroll-proportion="0.0">
+        <state line="28" column="42" selection-start="1184" selection-end="1184" vertical-scroll-proportion="-8.821428">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index/templates/admin_recommend.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="33" selection-start="2021" selection-end="2021" vertical-scroll-proportion="-5.714286">
+        <state line="2" column="22" selection-start="182" selection-end="182" vertical-scroll-proportion="0.12179487">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index/templates/admin_news.html">
+    <entry file="file://$PROJECT_DIR$/index/static/custom_js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="14" selection-start="1003" selection-end="1003" vertical-scroll-proportion="0.8532934">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index/static/custom_js/ready.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="17" selection-start="427" selection-end="427" vertical-scroll-proportion="0.0">
+        <state line="17" column="8" selection-start="249" selection-end="249" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#0#145#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index/static/custom_js/admin_update.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="355" column="35" selection-start="8975" selection-end="8975" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index/templates/admin_link.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="64" selection-start="3362" selection-end="3375" vertical-scroll-proportion="0.46153846">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/herald_index/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="139" column="27" selection-start="4877" selection-end="4877" vertical-scroll-proportion="0.81345564">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="22" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0">
+        <state line="28" column="54" selection-start="1375" selection-end="1375" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/herald_index/urls.py">
+    <entry file="file://$PROJECT_DIR$/index/templates/admin_app.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="43" selection-start="681" selection-end="681" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index/views_admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="13" selection-start="796" selection-end="796" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#28#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index/static/Herald Index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="25" column="67" selection-start="1215" selection-end="1215" vertical-scroll-proportion="-8.821428">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index/templates/admin_login.html">
+    <entry file="file://$PROJECT_DIR$/index/static/custom_js/admin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="71" selection-start="746" selection-end="746" vertical-scroll-proportion="0.73952097">
+        <state line="296" column="12" selection-start="6525" selection-end="6525" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index/static/custom_js/admin_ready.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="17" selection-start="427" selection-end="427" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index/conf.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="25" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index/templates/admin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="416" selection-end="416" vertical-scroll-proportion="0.6785714">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index/templates/wrapper.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="22" selection-start="179" selection-end="179" vertical-scroll-proportion="-2.7142856">
+        <state line="24" column="11" selection-start="442" selection-end="442" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="379" column="36" selection-start="10442" selection-end="10442" vertical-scroll-proportion="0.60882354">
+        <state line="440" column="27" selection-start="12050" selection-end="12050" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index/views_admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="348" column="37" selection-start="10605" selection-end="10605" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#28#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index/templates/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="777" selection-end="777" vertical-scroll-proportion="-7.464286">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index/templates/tab.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="67" selection-start="675" selection-end="675" vertical-scroll-proportion="0.34131736">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index/templates/herald_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="37" selection-start="1094" selection-end="1094" vertical-scroll-proportion="-6.785714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="60" selection-start="2809" selection-end="2809" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/herald_index/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="18" selection-start="1460" selection-end="1460" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index/templates/mod_herald_hot.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="62" selection-start="2902" selection-end="2902" vertical-scroll-proportion="0.26755852">
           <folding />
         </state>
       </provider>

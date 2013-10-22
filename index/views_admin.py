@@ -61,15 +61,7 @@ def get_link_list():
         "link_list":link_list
     }
     return dic
-    # json_ori = []
-    # for link in link_list:
-    #     dic = {
-    #         "name":link.name,
-    #         "url":link.url,
-    #         "id":link.id,
-    #         "level":link.hot_level
-    #     }
-    #     json_ori.append(dic)
+
 
 
 
@@ -307,3 +299,77 @@ def get_async_recommend(request):
 
 
 ###########   recommend    end           ############################
+
+############  wrapper   begin  ##################
+
+def save_wrapper_obj(request):
+    title = request.POST['title']
+    intro = request.POST['intro']
+    tip = request.POST['tip']
+    tip_url = request.POST['tip_url']
+    img_name = request.POST['img_name']
+    if models.Wrapper.objects.save_wrapper(
+            title, intro, tip, tip_url, img_name):
+        return HttpResponse(OPERATE_SUCCESS)
+    else:
+        return HttpResponse(OPERATE_FAILED)
+
+@csrf_exempt
+def upload_wrapper_img(request):
+    import json, os
+    post_pic = request.FILES["wrapper_up_pic"]
+    # logger.debug("上传文件type："+type(post_pic))
+    pic_name = create_filename_by_time(post_pic.name)
+    pic_full_path = os.path.join(settings.MEDIA_ROOT, "wrapper", pic_name).replace('\\', '/')
+    pic = open(pic_full_path, "wb+")
+    for chunk in post_pic.chunks():
+        pic.write(chunk)
+    pic.close()
+    return HttpResponse(json.dumps({"picname":pic_name}))
+
+
+def set_wrapper_num(request):
+    try:
+        num = int(request.POST["wrapper_num"])
+        conf.WRAPPER_NUM = num
+        return HttpResponse(OPERATE_SUCCESS)
+    except:
+        return HttpResponse(OPERATE_FAILED)
+
+
+##########   wrapper   end   ###############
+
+#########   app   ############
+
+def save_app(request):
+    try:
+        name = request.POST["name"]
+        intro = request.POST['intro']
+        url = request.POST['url']
+        img_name = request.POST['img_name']
+        if models.App.objects.save_app(name, intro, url, img_name):
+            return HttpResponse(OPERATE_SUCCESS)
+        else:
+            return HttpResponse(OPERATE_FAILED)
+    except:
+        return HttpResponse(OPERATE_FAILED)
+
+@csrf_exempt
+def upload_app_pic(request):
+    import json, os
+    post_pic = request.FILES["app_up_pic"]
+    # logger.debug("上传文件type："+type(post_pic))
+    pic_name = create_filename_by_time(post_pic.name)
+    pic_full_path = os.path.join(settings.MEDIA_ROOT, "app", pic_name).replace('\\', '/')
+    pic = open(pic_full_path, "wb+")
+    for chunk in post_pic.chunks():
+        pic.write(chunk)
+    pic.close()
+    return HttpResponse(json.dumps({"picname":pic_name}))
+
+
+##########   app end   ###########
+
+
+
+

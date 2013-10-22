@@ -23,22 +23,22 @@ DATABASES = {
         'HOST': '127.0.0.1',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '3306',                      # Set to empty string for default.
     },
-    conf.DB_NAME_LEAGUE : {
-        'ENGINE' : 'django.db.backends.mysql',
-        'NAME' : 'mydb2',
-        'USER' : 'root',
-        'PASSWORD' : '19901231',
-        'HOST' : '127.0.0.1',
-        'PORT' : '3306'
-    },
-    conf.DB_NAME_WIKI : {
-        'ENGINE' : 'django.db.backends.mysql',
-        'NAME' : 'mydb3',
-        'USER' : 'root',
-        'PASSWORD' : '19901231',
-        'HOST' : '127.0.0.1',
-        'PORT' : '3306'
-    },
+    # conf.DB_NAME_LEAGUE : {
+    #     'ENGINE' : 'django.db.backends.mysql',
+    #     'NAME' : 'mydb2',
+    #     'USER' : 'root',
+    #     'PASSWORD' : '19901231',
+    #     'HOST' : '127.0.0.1',
+    #     'PORT' : '3306'
+    # },
+    # conf.DB_NAME_WIKI : {
+    #     'ENGINE' : 'django.db.backends.mysql',
+    #     'NAME' : 'mydb3',
+    #     'USER' : 'root',
+    #     'PASSWORD' : '19901231',
+    #     'HOST' : '127.0.0.1',
+    #     'PORT' : '3306'
+    # },
 }
 
 DATABASE_ROUTERS = ['index.DBRouter.IndexDBRouter']

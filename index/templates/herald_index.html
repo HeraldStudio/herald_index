@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Herald Index</title>
+    <title>先声网</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta charset='utf-8'>
     <link href="{{ STATIC_URL }}Css/back-to-top/backtotop.css" rel="stylesheet" media="screen">
@@ -27,9 +27,9 @@
 
     {% include "mod_herald_hot.html" %}
 
-    {% include "mod_league.html" %}
-
-    {% include "mod_wiki.html" %}
+{#    {% include "mod_league.html" %}#}
+{##}
+{#    {% include "mod_wiki.html" %}#}
 
     {% include "footer.html" %}
 
@@ -48,6 +48,7 @@
     <script src="{{ STATIC_URL }}Js/lunbo/modernizr.custom.28468.js"></script>
     <script src="{{ STATIC_URL }}Js/lunbo/jquery.cslider.js"></script>
     <script src="{{ STATIC_URL }}JS/custom.js"></script>
+    <script src="{{ STATIC_URL }}custom_js/index.js"></script>
     <script type="text/javascript">
       $(function(){
       $('#da-slider').cslider(

@@ -1,4 +1,9 @@
 
+OK_RESPONSE_STATUS = "success"
+OK_OPERATE_RESPONOSE = "True"
+
+
+
 function csrfSafeMethod(method) {
     // these HTTP methods do not require CSRF protection
     return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
@@ -168,5 +173,148 @@ function pubRecText(picname)
     });
 }
 
+function setPubWrapper()
+{
+    $("#pub_wrapper").click(function(){
+    setCsrfHeader();
+    $.ajaxFileUpload
+    (
+        {
+            url:'/index/admin/upload_wrapper_pic/',
+            secureuri:false,
+            fileElementId:'wrapper_up_pic',
+            dataType: 'json',
+            success: function (data, status)
+            {
+//                alert(data.picname + " "+status);
+                saveWrapperText(data.picname);
+            },
+            error: function (data, status, e)
+            {
+                alert(e);
+            }
+        }
+    )
+
+//        alert("pub wrapper");
+        return false;
+    });
+}
+
+function saveWrapperText(picname)
+{
+    data = {
+        "title":$("#wrapper_name").val(),
+        "intro":$("#wrapper_intro").val(),
+        "tip":$("#wrapper_tip").val(),
+        "tip_url":$("#wrapper_tip_url").val(),
+        "img_name":picname
+    }
+    setCsrfHeader();
+    $.post(
+        "/index/admin/save_wrapper/",
+        data,
+        function(data, status){
+            if (data=="True"&&status=="success")
+            {
+                alert("发布成功");
+            }
+            else
+            {
+                alert("发布失败");
+            }
+        }
+    );
+}
+
+
+function setResetWrapper()
+{
+    $("#reset_wrapper").click(function(){
+        $("#wrapper_name").val("");
+        $("#wrapper_intro").val("");
+        $("#wrapper_tip").val("");
+        $("#wrapper_tip_url").val("");
+        $("#wrapper_up_pic").val("");
+        return false;
+    });
+}
+
+
+function setWrapperNumClick()
+{
+    $("#set_wrapper_num").click(function(){
+        num = $("#wrapper_num").val();
+        setCsrfHeader();
+        $.post(
+            "/index/admin/set_wrapper_num/",
+            {"wrapper_num":num},
+            function(data, status){
+                if(data=="True" && status=="success")
+                {
+                    alert("设置成功");
+                }
+                else
+                {
+                    alert("设置失败");
+                }
+            }
+        );
+        return false;
+    });
+
+}
+
+
+function setPubAppClick()
+{
+    $("#pub_app").click(function(){
+        setCsrfHeader();
+        $.ajaxFileUpload
+        (
+            {
+                url:'/index/admin/upload_app_pic/',
+                secureuri:false,
+                fileElementId:'app_up_pic',
+                dataType: 'json',
+                success: function (data, status)
+                {
+    //                alert(data.picname + " "+status);
+                    saveAppText(data.picname);
+                },
+                error: function (data, status, e)
+                {
+                    alert(e);
+                }
+            }
+        )
+        return false;
+    });
+}
+
+function saveAppText(imgname)
+{
+    data = {
+        "name": $("#app_name").val(),
+        "intro": $("#app_intro").val(),
+        "url" : $("#app_link").val(),
+        "img_name":imgname
+    }
+    setCsrfHeader();
+    $.post(
+        "/index/admin/save_app/",
+        data,
+        function(data, status){
+            if (data==OK_OPERATE_RESPONOSE &&  status==OK_RESPONSE_STATUS)
+            {
+                alert("发布成功");
+            }
+            else
+            {
+                alert("发布失败");
+            }
+        }
+    );
+}
 
 

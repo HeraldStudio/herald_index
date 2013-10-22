@@ -1,0 +1,66 @@
+<div class="tab-pane" id="tab4">
+    <div class="row-fluid">
+        <legend>更新轮播屏</legend>
+
+        <form class="form-horizontal" > <!-- action="/index/admin/save_link/" method="post" -->
+            <div class="control-group inline">
+                <label class="control-label" for="wrapper_name">标题</label>
+                <div class="controls">
+                    <input type="text" class="input-xxlarge" id="wrapper_name" name="wrapper_name">
+                </div>
+            </div>
+            <div class="control-group inline">
+                <label class="control-label" for="wrapper_intro">简介</label>
+                <div class="controls">
+                    <textarea rows="3" class="input-xxlarge" id="wrapper_intro" name="wrapper_intro"></textarea>
+                </div>
+            </div>
+            <div class="control-group inline">
+                <label class="control-label" for="wrapper_tip">标签</label>
+                <div class="controls">
+                    <input type="text" class="input-xxlarge" id="wrapper_tip" name="wrapper_tip">
+                </div>
+            </div>
+            <div class="control-group inline">
+                <label class="control-label" for="wrapper_tip_url">标签链接</label>
+                <div class="controls">
+                    <input type="text" class="input-xxlarge" id="wrapper_tip_url" name="wrapper_tip_url">
+                </div>
+            </div>
+            <div class="controls-group">
+                <label class="control-label" for="wrapper_up_pic">上传图片</label>
+                <div class="controls">
+                    <input type="file" id="wrapper_up_pic" name="wrapper_up_pic">
+                    <span class="help-block">（图片上传后不进行处理,注意上传的图片的大小！！）</span>
+                </div>
+            </div>
+            <div class="form-actions">
+                <div class="controls">
+                    <button class="btn btn-primary" id="pub_wrapper">发布</button>
+{#                    <input type="button" id="pub_link" value="发布">#}
+                    <button class="btn" id="reset_wrapper">重置</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+    <div class="row-fluid">
+        <legend>设置轮播个数</legend>
+        <form class="form-horizontal">
+            <div class="control-group">
+                <label class="control-label" for="wrapper_num">轮播个数</label>
+                <div class="controls">
+                    <input id="wrapper_num" type="text">
+                </div>
+
+            </div>
+            <div class="form-actions">
+                <div class="controls">
+                    <button class="btn btn-primary" id="set_wrapper_num" type="submit" >设置</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+</div>
