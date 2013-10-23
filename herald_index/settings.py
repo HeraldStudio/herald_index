@@ -1,4 +1,5 @@
 # Django settings for herald_index project.
+# -*- encoding: utf-8 -*-
 
 import os
 
@@ -13,16 +14,28 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+LOCAL_TEST = True
+
+local_db = {
+     'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+    'NAME': 'mydb1',  #herald_index                    # Or path to database file if using sqlite3.
+    # The following settings are not used with sqlite3:
+    'USER': 'root', # herald_index
+    'PASSWORD': '19901231',  # index@herald
+    'HOST': '127.0.0.1', #121.248.63.106                     # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+    'PORT': '3306',                      # Set to empty string for default.
+}
+
+
+
+db_dic = {}
+if LOCAL_TEST:
+    db_dic = local_db
+else:
+    db_dic = remote_db
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'mydb1',                      # Or path to database file if using sqlite3.
-        # The following settings are not used with sqlite3:
-        'USER': 'root',
-        'PASSWORD': '19901231',
-        'HOST': '127.0.0.1',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'PORT': '3306',                      # Set to empty string for default.
-    },
+    'default': db_dic,
     # conf.DB_NAME_LEAGUE : {
     #     'ENGINE' : 'django.db.backends.mysql',
     #     'NAME' : 'mydb2',
@@ -78,7 +91,7 @@ MEDIA_ROOT = os.path.join(HERE, '..', 'media').replace('\\','/')
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://example.com/media/", "http://media.example.com/"
-MEDIA_URL = '/media/'
+MEDIA_URL = '/index/media/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
@@ -88,7 +101,7 @@ STATIC_ROOT = os.path.join(HERE, '..', 'static').replace('\\', '/')
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
-STATIC_URL = '/static/'
+STATIC_URL = '/index/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
@@ -178,6 +191,14 @@ LOGGING = {
             'class': 'logging.StreamHandler',
             'formatter': 'standard'
         },
+        'scprits_handler': {
+            'level':'DEBUG',
+            'class':'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(os.path.dirname(__file__),"../logs/",'script_error.log'), #或者直接写路径：'filename':'c:\logs\script.log'
+            'maxBytes': 1024*1024*5, # 5 MB
+            'backupCount': 5,
+            'formatter':'standard',
+        },
     },
     'loggers': {
         'django.request': {
@@ -186,7 +207,7 @@ LOGGING = {
             'propagate': True,
         },
         'index':{
-            'handlers':['console',],
+            'handlers':['scprits_handler',],
             'level':"DEBUG",
             'propagate':True
         }

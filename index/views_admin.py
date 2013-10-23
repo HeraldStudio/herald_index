@@ -33,7 +33,7 @@ def login(request):
         else:
             return render_to_response("admin_login.html",{"error":"用户名或密码错误"}, RequestContext(request))
     except Exception,e:
-        logger.debug(request.user.is_authenticated())
+        logger.debug(str(e))
         return render_to_response("admin_login.html",{}, RequestContext(request))
 
 
@@ -66,13 +66,16 @@ def get_link_list():
 
 
 def admin(request):
-    if not request.user.is_authenticated():
-        return HttpResponseRedirect("/index/admin/login/")
-    dics = {}
-    dics.update(get_new_list())
-    dics.update(get_rec_list())
-    dics.update(get_link_list())
-    return render_to_response("admin.html", dics, RequestContext(request))
+    try:
+        if not request.user.is_authenticated():
+            return HttpResponseRedirect("/index/admin/login/")
+        dics = {}
+        dics.update(get_new_list())
+        dics.update(get_rec_list())
+        dics.update(get_link_list())
+        return render_to_response("admin.html", dics, RequestContext(request))
+    except Exception,e:
+        logger.debug(e)
 
 ############   index end    ##################
 
@@ -95,7 +98,7 @@ def save_link(request):
             link.save()
         return HttpResponse("save link success")
     except Exception,e:
-        print e
+        logger.debug(e)
         return HttpResponse(str(e))
 
 def delete_link(request):
@@ -105,7 +108,8 @@ def delete_link(request):
             return HttpResponse(OPERATE_SUCCESS)
         else:
             return HttpResponse(OPERATE_FAILED)
-    except:
+    except Exception,e:
+        logger.debug(e)
         return HttpResponse(OPERATE_FAILED)
 
 def update_link(request):
@@ -119,7 +123,7 @@ def update_link(request):
         else:
             return HttpResponse(OPERATE_FAILED)
     except Exception,e:
-        logger.debug(str(e))
+        logger.debug(e)
         return HttpResponse(OPERATE_FAILED)
 
 
@@ -155,34 +159,41 @@ def save_news(request):
             news.save()
         return HttpResponse("save news success")
     except Exception,e:
+        logger.debug(e)
         return HttpResponse(str(e))
 
 def update_news(request):
-    id = int(request.POST['id'])
-    title = request.POST['title']
-    url = request.POST['url']
-    is_headline = request.POST['headline']
-    if models.Herald_news_list.objects.update_news(id, title, url, is_headline):
-        return HttpResponse(OPERATE_SUCCESS)
-    else:
-        return HttpResponse(OPERATE_FAILED)
+    try:
+        id = int(request.POST['id'])
+        title = request.POST['title']
+        url = request.POST['url']
+        is_headline = request.POST['headline']
+        if models.Herald_news_list.objects.update_news(id, title, url, is_headline):
+            return HttpResponse(OPERATE_SUCCESS)
+        else:
+            return HttpResponse(OPERATE_FAILED)
+    except Exception,e:
+        logger.debug(e)
 
 def get_async_news(request):
-    page = int(request.GET["page_num"])
-    news_list = models.Herald_news_list.objects.get_some_news(
-        conf.ITEM_NUM_IN_ONE_PAGE*(page-1),
-        conf.ITEM_NUM_IN_ONE_PAGE*page)
-    json_ori = []
-    for news in news_list:
-        tmp_dic = {
-            "id": news.id,
-            "title":news.title,
-            "url":news.url,
-            "date": str(news.date),
-            "headline":news.is_headline
-        }
-        json_ori.append(tmp_dic)
-    return HttpResponse(json.dumps(json_ori))
+    try:
+        page = int(request.GET["page_num"])
+        news_list = models.Herald_news_list.objects.get_some_news(
+            conf.ITEM_NUM_IN_ONE_PAGE*(page-1),
+            conf.ITEM_NUM_IN_ONE_PAGE*page)
+        json_ori = []
+        for news in news_list:
+            tmp_dic = {
+                "id": news.id,
+                "title":news.title,
+                "url":news.url,
+                "date": str(news.date),
+                "headline":news.is_headline
+            }
+            json_ori.append(tmp_dic)
+        return HttpResponse(json.dumps(json_ori))
+    except Exception,e:
+        logger.debug(e)
 
 def delete_news(request):
     try:
@@ -191,7 +202,8 @@ def delete_news(request):
             return HttpResponse(OPERATE_SUCCESS)
         else:
             return HttpResponse(OPERATE_FAILED)
-    except:
+    except Exception,e:
+        logger.debug(e)
         return HttpResponse(OPERATE_FAILED)
 
 
@@ -220,26 +232,29 @@ def save_recommend(request):
             rec.save()
         return HttpResponse("publish recommend success!")
     except Exception,e:
+        logger.debug(e)
         return HttpResponse("publish recommend failed!")
 
 @csrf_exempt
 def upload_rec_pic(request):
-    import json, os
-    post_pic = request.FILES["rec_up_pic"]
-    # logger.debug("上传文件type："+type(post_pic))
-    pic_name = create_filename_by_time(post_pic.name)
-    pic_full_path = os.path.join(settings.MEDIA_ROOT, "recommend", pic_name).replace('\\', '/')
-    pic = open(pic_full_path, "wb+")
-    for chunk in post_pic.chunks():
-        pic.write(chunk)
-    pic.close()
-    import tools
-    tools.resize_and_save_img((100,150), pic_full_path)
+    try:
+        import json, os
+        post_pic = request.FILES["rec_up_pic"]
+        # logger.debug("上传文件type："+type(post_pic))
+        pic_name = create_filename_by_time(post_pic.name)
+        pic_full_path = os.path.join(settings.MEDIA_ROOT, "recommend", pic_name).replace('\\', '/')
+        pic = open(pic_full_path, "wb+")
+        for chunk in post_pic.chunks():
+            pic.write(chunk)
+        pic.close()
+        import tools
+        tools.resize_and_save_img((100,150), pic_full_path)
 
-    return HttpResponse(json.dumps({"picname":pic_name}))
+        return HttpResponse(json.dumps({"picname":pic_name}))
+    except Exception,e:
+        logger.debug(e)
 
 def create_filename_by_time(filename):
-    logger.debug(filename)
     import time, random
     t = time.time()
     t_str = time.strftime('%Y%m%d%H%M%S',time.localtime(time.time()))
@@ -254,7 +269,7 @@ def delete_recommend(request):
         else:
             return HttpResponse(OPERATE_FAILED)
     except Exception,e:
-        logger.debug(str(e))
+        logger.debug(e)
         return HttpResponse(OPERATE_FAILED)
 
 def update_recommend(request):
@@ -269,7 +284,7 @@ def update_recommend(request):
         else:
             return HttpResponse(OPERATE_FAILED)
     except Exception,e:
-        logger.debug(str(e))
+        logger.debug(e)
         return HttpResponse(OPERATE_FAILED)
 
 def get_async_recommend(request):
@@ -291,7 +306,7 @@ def get_async_recommend(request):
             ori_json.append(dic)
         return HttpResponse(json.dumps(ori_json))
     except Exception,e:
-        logger.debug(str(e))
+        logger.debug(e)
         return HttpResponse(OPERATE_FAILED)
 
 
@@ -303,29 +318,35 @@ def get_async_recommend(request):
 ############  wrapper   begin  ##################
 
 def save_wrapper_obj(request):
-    title = request.POST['title']
-    intro = request.POST['intro']
-    tip = request.POST['tip']
-    tip_url = request.POST['tip_url']
-    img_name = request.POST['img_name']
-    if models.Wrapper.objects.save_wrapper(
-            title, intro, tip, tip_url, img_name):
-        return HttpResponse(OPERATE_SUCCESS)
-    else:
-        return HttpResponse(OPERATE_FAILED)
+    try:
+        title = request.POST['title']
+        intro = request.POST['intro']
+        tip = request.POST['tip']
+        tip_url = request.POST['tip_url']
+        img_name = request.POST['img_name']
+        if models.Wrapper.objects.save_wrapper(
+                title, intro, tip, tip_url, img_name):
+            return HttpResponse(OPERATE_SUCCESS)
+        else:
+            return HttpResponse(OPERATE_FAILED)
+    except Exception,e:
+        logger.debug(e)
 
 @csrf_exempt
 def upload_wrapper_img(request):
-    import json, os
-    post_pic = request.FILES["wrapper_up_pic"]
-    # logger.debug("上传文件type："+type(post_pic))
-    pic_name = create_filename_by_time(post_pic.name)
-    pic_full_path = os.path.join(settings.MEDIA_ROOT, "wrapper", pic_name).replace('\\', '/')
-    pic = open(pic_full_path, "wb+")
-    for chunk in post_pic.chunks():
-        pic.write(chunk)
-    pic.close()
-    return HttpResponse(json.dumps({"picname":pic_name}))
+    try:
+        import json, os
+        post_pic = request.FILES["wrapper_up_pic"]
+        # logger.debug("上传文件type："+type(post_pic))
+        pic_name = create_filename_by_time(post_pic.name)
+        pic_full_path = os.path.join(settings.MEDIA_ROOT, "wrapper", pic_name).replace('\\', '/')
+        pic = open(pic_full_path, "wb+")
+        for chunk in post_pic.chunks():
+            pic.write(chunk)
+        pic.close()
+        return HttpResponse(json.dumps({"picname":pic_name}))
+    except Exception,e:
+        logger.debug(e)
 
 
 def set_wrapper_num(request):
@@ -333,7 +354,8 @@ def set_wrapper_num(request):
         num = int(request.POST["wrapper_num"])
         conf.WRAPPER_NUM = num
         return HttpResponse(OPERATE_SUCCESS)
-    except:
+    except Exception,e:
+        logger.debug(e)
         return HttpResponse(OPERATE_FAILED)
 
 
@@ -351,21 +373,25 @@ def save_app(request):
             return HttpResponse(OPERATE_SUCCESS)
         else:
             return HttpResponse(OPERATE_FAILED)
-    except:
+    except Exception,e:
+        logger.debug(e)
         return HttpResponse(OPERATE_FAILED)
 
 @csrf_exempt
 def upload_app_pic(request):
-    import json, os
-    post_pic = request.FILES["app_up_pic"]
-    # logger.debug("上传文件type："+type(post_pic))
-    pic_name = create_filename_by_time(post_pic.name)
-    pic_full_path = os.path.join(settings.MEDIA_ROOT, "app", pic_name).replace('\\', '/')
-    pic = open(pic_full_path, "wb+")
-    for chunk in post_pic.chunks():
-        pic.write(chunk)
-    pic.close()
-    return HttpResponse(json.dumps({"picname":pic_name}))
+    try:
+        import json, os
+        post_pic = request.FILES["app_up_pic"]
+        # logger.debug("上传文件type："+type(post_pic))
+        pic_name = create_filename_by_time(post_pic.name)
+        pic_full_path = os.path.join(settings.MEDIA_ROOT, "app", pic_name).replace('\\', '/')
+        pic = open(pic_full_path, "wb+")
+        for chunk in post_pic.chunks():
+            pic.write(chunk)
+        pic.close()
+        return HttpResponse(json.dumps({"picname":pic_name}))
+    except Exception,e:
+        logger.debug(e)
 
 
 ##########   app end   ###########

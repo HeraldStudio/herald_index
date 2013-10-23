@@ -19,6 +19,8 @@ LEAGUE_DETAIL_HALF_URL = ""
 import logging
 logger = logging.getLogger("index")
 
+OPERATE_FAILED = "False"
+
 
 def get_hot_dic():
     #####  hot module
@@ -88,27 +90,34 @@ def get_app():
 
 
 def index(request):
-    dics = {}
-    ####  ori dics
-    dics.update(get_hot_dic())
-    dics.update(get_wrapper())
-    dics.update(conf.URL_DIC)
-    dics.update(get_app())
-    #### module dic  added here   #####
-    #dics.update(get_wiki_dic())   ##### wiki module
-    #dics.update(get_league_dic())    ######  league  module
-
-    return render_to_response("herald_index.html", dics, RequestContext(request))
+    try:
+        dics = {}
+        ####  ori dics
+        dics.update(get_hot_dic())
+        dics.update(get_wrapper())
+        dics.update(conf.URL_DIC)
+        dics.update(get_app())
+        #### module dic  added here   #####
+        #dics.update(get_wiki_dic())   ##### wiki module
+        #dics.update(get_league_dic())    ######  league  module
+        return render_to_response("herald_index.html", dics, RequestContext(request))
+    except Exception,e:
+        logger.debug(e)
+        return HttpResponse(OPERATE_FAILED)
 
 
 
 def download_file(request):
-    f = open("F:/Workspace-Py/herald_index/static/down.zip","rb")
-    data = f.read()
-    f.close()
-    res = HttpResponse(data, mimetype="application/octet-stream")
-    res["Content-Disposition"] = "attachment; fileName=%s"%("app.zip")
-    return res
+    try:
+        f = open("F:/Workspace-Py/herald_index/static/down.zip","rb")
+        data = f.read()
+        f.close()
+        res = HttpResponse(data, mimetype="application/octet-stream")
+        res["Content-Disposition"] = "attachment; fileName=%s"%("app.zip")
+        return res
+    except Exception,e:
+        logger.debug(e)
+        return HttpResponse(OPERATE_FAILED)
 
 
 

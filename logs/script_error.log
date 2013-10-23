@@ -1,0 +1,26 @@
+2013-10-23 22:16:01,016 [Thread-1:4684] [index:163] [INFO]- 标题长度:5
+2013-10-23 22:16:01,016 [Thread-1:4684] [index:163] [INFO]- 标题长度:3
+2013-10-23 22:16:01,017 [Thread-1:4684] [index:163] [INFO]- 标题长度:18
+2013-10-23 22:16:01,023 [Thread-1:4684] [index:75] [DEBUG]- wrapper有：1
+2013-10-23 22:16:01,025 [Thread-1:4684] [index:97] [DEBUG]- test
+2013-10-23 22:19:48,167 [Thread-1:28872] [index:105] [DEBUG]- "Key 'HHH' not found in <QueryDict: {}>"
+2013-10-23 22:35:13,650 [Thread-1:32244] [index:103] [DEBUG]- (1045, "Access denied for user 'herald_index'@'223.3.20.201' (using password: NO)")
+2013-10-23 22:35:25,973 [Thread-1:32340] [index:103] [DEBUG]- (1045, "Access denied for user 'herald_index'@'223.3.20.201' (using password: NO)")
+2013-10-23 22:35:27,740 [Thread-3:32836] [index:103] [DEBUG]- (1045, "Access denied for user 'herald_index'@'223.3.20.201' (using password: NO)")
+2013-10-23 22:35:59,723 [Thread-1:33452] [index:103] [DEBUG]- (1045, "Access denied for user 'herald_index'@'223.3.20.201' (using password: NO)")
+2013-10-23 22:37:48,714 [Thread-1:34932] [index:105] [DEBUG]- (1045, "Access denied for user 'herald_index'@'223.3.20.201' (using password: NO)")
+2013-10-23 22:37:50,690 [Thread-3:34388] [index:105] [DEBUG]- (1045, "Access denied for user 'herald_index'@'223.3.20.201' (using password: NO)")
+2013-10-23 22:38:29,253 [Thread-1:30120] [index:163] [INFO]- 标题长度:5
+2013-10-23 22:38:29,253 [Thread-1:30120] [index:163] [INFO]- 标题长度:3
+2013-10-23 22:38:29,255 [Thread-1:30120] [index:163] [INFO]- 标题长度:18
+2013-10-23 22:38:29,259 [Thread-1:30120] [index:77] [DEBUG]- wrapper有：1
+2013-10-23 22:38:50,772 [Thread-23:28292] [index:163] [INFO]- 标题长度:5
+2013-10-23 22:38:50,772 [Thread-23:28292] [index:163] [INFO]- 标题长度:3
+2013-10-23 22:38:50,772 [Thread-23:28292] [index:163] [INFO]- 标题长度:18
+2013-10-23 23:07:53,693 [Thread-31:40636] [index:163] [INFO]- 标题长度:5
+2013-10-23 23:07:53,693 [Thread-31:40636] [index:163] [INFO]- 标题长度:3
+2013-10-23 23:07:53,693 [Thread-31:40636] [index:163] [INFO]- 标题长度:18
+2013-10-23 23:08:40,717 [Thread-42:37812] [index:163] [INFO]- 标题长度:5
+2013-10-23 23:08:40,717 [Thread-42:37812] [index:163] [INFO]- 标题长度:3
+2013-10-23 23:08:40,723 [Thread-42:37812] [index:163] [INFO]- 标题长度:18
+2013-10-23 23:08:40,733 [Thread-42:37812] [index:77] [DEBUG]- wrapper有：0
