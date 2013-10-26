@@ -28,11 +28,13 @@ APP_NUM = 3
 URL_DIC = {
     "aboutus_url":"http://herald.seu.edu.cn/about/#joinus",
     "league_url":"http://herald.seu.edu.cn/herald_league/",
+    "seu_wiki_url":"http://herald.seu.edu.cn/seu_wiki/index.php/",
     "wiki_url":"",
     "military_url":"http://herald.seu.edu.cn/military/",
     "radio_url":"http://herald.seu.edu.cn/radio2/",
     "artical_url":"",
     "market_url":"",
-    "laf_url":""
+    "laf_url":"http://herald.seu.edu.cn/laf/",
+    "home_url":"http://herald.seu.edu.cn"
 }
 

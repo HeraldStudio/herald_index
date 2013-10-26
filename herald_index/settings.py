@@ -26,7 +26,9 @@ local_db = {
     'PORT': '3306',                      # Set to empty string for default.
 }
 
+remote_db = {
 
+}
 
 db_dic = {}
 if LOCAL_TEST:

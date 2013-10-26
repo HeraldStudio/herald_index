@@ -10,12 +10,12 @@
           <h5>先声热点<small><a href="{{ headline.url }}">{{ headline.title }}</a></small></h5>
           <div class="col-lg-6 col-md-6  col-sm-6 news">
             {% for news in news_group1 %}
-              <li><a href="{{ news.url }}">{{ news.title }}</a></li>
+              <li><a target="_blank" href="{{ news.url }}">{{ news.title }}</a></li>
             {% endfor %}
           </div>
           <div class="col-lg-6 col-md-6 col-sm-6 news">
             {% for news in news_group2 %}
-              <li><a href="{{ news.url }}">{{ news.title }}</a></li>
+              <li><a target="_blank" href="{{ news.url }}">{{ news.title }}</a></li>
             {% endfor %}
           </div>
           <div class="clearfix"></div>
@@ -25,9 +25,9 @@
 
           {% for rec in recs_group1 %}
             <div>
-              <a href="" class="col-lg-4 col-md-4 col-sm-4  "><img src="{{ MEDIA_URL }}recommend\{{ rec.img_path }}" alt=""  class="img-responsive"></a>
+              <a target="_blank" href="{{ rec.url }}" class="col-lg-4 col-md-4 col-sm-4  "><img src="{{ MEDIA_URL }}recommend\{{ rec.img_path }}" alt=""  class="img-responsive"></a>
               <div class="col-lg-8 col-md-8 col-sm-8  ">
-                <a href="{{ rec.url }}"><b>{{ rec.title }}</b></a>
+                <a target="_blank" href="{{ rec.url }}"><b>{{ rec.title }}</b></a>
                 <div>
                 {{ rec.intro }}
                 </div>
@@ -40,9 +40,9 @@
           <div class="col-lg-6 col-md-6 col-sm-6  recommand">
           {% for rec in recs_group2 %}
             <div>
-              <a href="" class="col-lg-4 col-md-4 col-sm-4  "><img src="{{ MEDIA_URL }}recommend\{{ rec.img_path }}" alt="" class="img-responsive"></a>
+              <a target="_blank" href="" class="col-lg-4 col-md-4 col-sm-4  "><img src="{{ MEDIA_URL }}recommend\{{ rec.img_path }}" alt="" class="img-responsive"></a>
               <div class="col-lg-8 col-md-8 col-sm-8  ">
-                <a href="{{ rec.url }}"><b>{{ rec.title }}</b></a>
+                <a target="_blank" href="{{ rec.url }}"><b>{{ rec.title }}</b></a>
                 <div>
                 {{ rec.intro }}
                 </div>
@@ -61,24 +61,28 @@
         <div class="webnavigation col-lg-12 col-md-12 col-sm-12">
         {% for link in links %}
             {% ifequal link.hot_level 1 %}
-                <span><a href="{{ link.url }}" style="color:orange;">{{ link.name }}</a></span>
+                <span><a target="_blank" href="{{ link.url }}" style="color:orange;">{{ link.name }}</a></span>
             {% else %}
-                <span><a href="{{ link.url }}">{{ link.name }}</a></span>
+                <span><a target="_blank" href="{{ link.url }}">{{ link.name }}</a></span>
             {% endifequal %}
         {% endfor %}
         </div>
-        <div class="clearfix"></div>
         <h5>先声手机应用</h5>
         <div class="mobile">
             {% for app in apps %}
-                <a href="{{ app.down_url }}" class="developing"><img src="{{ MEDIA_URL }}app/{{ app.img_name }}" alt="" class="img-responsive"></a>
+                <a app_name="{{ app.name }}" href="{{ app.down_url }}" class="app_module"><img src="{{ MEDIA_URL }}app/{{ app.img_name }}" alt="" class="img-responsive"></a>
             {% endfor %}
 {#          <a href="/index/download/"><img src="{{ STATIC_URL }}Images/mobile.png" alt="" class="img-responsive"></a>#}
 {#          <img src="{{ STATIC_URL }}Images/mobile.png" alt="" class="img-responsive">#}
+
         </div>
         <div>
         </div>
       </div>
     </div>
   </div>
+
+  {% include "module_weyichats.html" %}
+  {% include "module_and_app.html" %}
+
 </section>

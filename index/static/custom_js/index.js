@@ -8,6 +8,7 @@
 
 $(document).ready(function(){
     developingWarning();
+    setAppClick();
 });
 
 
@@ -20,6 +21,34 @@ function developingWarning()
         return false;
     });
 
+}
+
+
+function setAppClick()
+{
+    $(".app_module").click(function(){
+        appname = $(this).attr("app_name");
+        alert(appname);
+        if(appname=="先声")
+        {
+            showAndroidModal();
+        }
+        if(appname=="小猴偷米")
+        {
+            showChatsModal();
+        }
+        return false;
+    });
+}
+
+function showChatsModal()
+{
+        $('#chatsmodal').modal('show');
+}
+
+function showAndroidModal()
+{
+    $("#androidmodal").modal("show");
 }
 
 
